@@ -24,11 +24,13 @@
             </objects>
             <point key="canvasLocation" x="1791" y="673"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Suche-->
         <scene sceneID="hET-qG-ms3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bKC-eV-TPB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Suche" image="search" id="qoy-yj-SmJ"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nHQ-LK-lCT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -43,4 +45,7 @@
             <point key="canvasLocation" x="979" y="673"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="search" width="30" height="30"/>
+    </resources>
 </document>

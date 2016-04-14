@@ -24,11 +24,13 @@
             </objects>
             <point key="canvasLocation" x="1781" y="601"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Kontakte-->
         <scene sceneID="TO8-yT-2hq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o91-rS-31d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kontakte" image="contacts" id="qoM-4a-Vu8"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ygf-Xb-YGu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -43,4 +45,7 @@
             <point key="canvasLocation" x="969" y="601"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="contacts" width="30" height="30"/>
+    </resources>
 </document>

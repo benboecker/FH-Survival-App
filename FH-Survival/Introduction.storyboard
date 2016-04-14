@@ -5,10 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Start-->
         <scene sceneID="2vV-NI-K6l">
             <objects>
-                <navigationController id="vc4-vC-g9t" sceneMemberID="viewController">
+                <navigationController title="Start" id="vc4-vC-g9t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Start" image="home" id="PY4-kg-ohQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nMr-oE-xc1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,4 +43,7 @@
             <point key="canvasLocation" x="1917" y="384"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="30" height="30"/>
+    </resources>
 </document>

@@ -24,11 +24,13 @@
             </objects>
             <point key="canvasLocation" x="1675" y="753"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tipps-->
         <scene sceneID="cQn-Tc-rcg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7cg-Hk-hje" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tipps" image="hints" id="GXn-ag-MAN"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RCT-Nl-IaT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -43,4 +45,7 @@
             <point key="canvasLocation" x="863" y="753"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hints" width="30" height="30"/>
+    </resources>
 </document>

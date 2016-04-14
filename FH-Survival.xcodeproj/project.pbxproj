@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B3AB06FB1CC01A6C001D3AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB06FA1CC01A6C001D3AC1 /* AppDelegate.swift */; };
 		B3AB07001CC01A6C001D3AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB06FE1CC01A6C001D3AC1 /* Main.storyboard */; };
-		B3AB07021CC01A6C001D3AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AB07011CC01A6C001D3AC1 /* Assets.xcassets */; };
 		B3AB07051CC01A6C001D3AC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB07031CC01A6C001D3AC1 /* LaunchScreen.storyboard */; };
 		B3AB070E1CC01DC3001D3AC1 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB070D1CC01DC3001D3AC1 /* IntroductionViewController.swift */; };
 		B3AB07101CC01DD5001D3AC1 /* OrganisationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB070F1CC01DD5001D3AC1 /* OrganisationViewController.swift */; };
@@ -21,13 +20,13 @@
 		B3AB071C1CC01E95001D3AC1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB071B1CC01E95001D3AC1 /* Search.storyboard */; };
 		B3AB071E1CC01E9B001D3AC1 /* Hints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB071D1CC01E9B001D3AC1 /* Hints.storyboard */; };
 		B3AB07201CC01EA4001D3AC1 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB071F1CC01EA4001D3AC1 /* Contacts.storyboard */; };
+		B3B681C71CC02F8D00958F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B681C61CC02F8D00958F22 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3AB06F71CC01A6C001D3AC1 /* FH-Survival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH-Survival.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AB06FA1CC01A6C001D3AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3AB06FF1CC01A6C001D3AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B3AB07011CC01A6C001D3AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3AB07041CC01A6C001D3AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3AB07061CC01A6C001D3AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3AB070D1CC01DC3001D3AC1 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		B3AB071B1CC01E95001D3AC1 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		B3AB071D1CC01E9B001D3AC1 /* Hints.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hints.storyboard; sourceTree = "<group>"; };
 		B3AB071F1CC01EA4001D3AC1 /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		B3B681C61CC02F8D00958F22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 				B3AB07211CC01EBC001D3AC1 /* Storyboards */,
 				B3AB070C1CC01D89001D3AC1 /* View Controllers */,
 				B3AB06FA1CC01A6C001D3AC1 /* AppDelegate.swift */,
-				B3AB07011CC01A6C001D3AC1 /* Assets.xcassets */,
+				B3B681C61CC02F8D00958F22 /* Assets.xcassets */,
 				B3AB07061CC01A6C001D3AC1 /* Info.plist */,
 			);
 			path = "FH-Survival";
@@ -179,8 +179,8 @@
 				B3AB07051CC01A6C001D3AC1 /* LaunchScreen.storyboard in Resources */,
 				B3AB071E1CC01E9B001D3AC1 /* Hints.storyboard in Resources */,
 				B3AB071A1CC01E8F001D3AC1 /* Organisation.storyboard in Resources */,
-				B3AB07021CC01A6C001D3AC1 /* Assets.xcassets in Resources */,
 				B3AB071C1CC01E95001D3AC1 /* Search.storyboard in Resources */,
+				B3B681C71CC02F8D00958F22 /* Assets.xcassets in Resources */,
 				B3AB07001CC01A6C001D3AC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

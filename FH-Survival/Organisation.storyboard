@@ -24,11 +24,13 @@
             </objects>
             <point key="canvasLocation" x="1809" y="389"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Organisation-->
         <scene sceneID="NEM-eO-h5g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IuU-IR-K5g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Organisation" image="organisation" id="IGh-QX-LUl"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2i2-f2-YOj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -43,4 +45,7 @@
             <point key="canvasLocation" x="997" y="389"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="organisation" width="30" height="30"/>
+    </resources>
 </document>
