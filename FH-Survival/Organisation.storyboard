@@ -46,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="organisation" width="30" height="30"/>
+        <image name="organisation" width="20" height="20"/>
     </resources>
 </document>

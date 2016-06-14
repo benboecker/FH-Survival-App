@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+    <entity name="Contact" representedClassName=".Contact" parentEntity="Information" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Information" representedClassName=".Information" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="information" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="urls" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="URL" inverseName="information" inverseEntity="URL" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName=".Tag" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="information" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Information" inverseName="tags" inverseEntity="Information" syncable="YES"/>
+    </entity>
+    <entity name="URL" representedClassName=".URL" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="information" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Information" inverseName="urls" inverseEntity="Information" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Contact" positionX="-189" positionY="65" width="128" height="73"/>
+        <element name="Information" positionX="-189" positionY="-171" width="128" height="118"/>
+        <element name="Tag" positionX="61" positionY="-171" width="128" height="73"/>
+        <element name="URL" positionX="-459" positionY="-171" width="128" height="88"/>
+    </elements>
+</model>
