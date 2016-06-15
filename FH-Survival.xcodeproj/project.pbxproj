@@ -39,6 +39,21 @@
 		B3D5DD551D109790000522BC /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D5DD541D109790000522BC /* ContactTableViewCell.swift */; };
 		B3D5DD5A1D10AB7C000522BC /* InformationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D5DD591D10AB7C000522BC /* InformationListTableViewController.swift */; };
 		B3D5DD5C1D10ADFC000522BC /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D5DD5B1D10ADFC000522BC /* Information.swift */; };
+		B53398651D111F4F005C8EEA /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398561D111F4F005C8EEA /* Collection.swift */; };
+		B53398661D111F4F005C8EEA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398571D111F4F005C8EEA /* Contact.swift */; };
+		B53398671D111F4F005C8EEA /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398581D111F4F005C8EEA /* Content.swift */; };
+		B53398681D111F4F005C8EEA /* Diagnose.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398591D111F4F005C8EEA /* Diagnose.swift */; };
+		B53398691D111F4F005C8EEA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533985A1D111F4F005C8EEA /* Error.swift */; };
+		B533986A1D111F4F005C8EEA /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533985B1D111F4F005C8EEA /* Hint.swift */; };
+		B533986B1D111F4F005C8EEA /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533985C1D111F4F005C8EEA /* Information.swift */; };
+		B533986C1D111F4F005C8EEA /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533985D1D111F4F005C8EEA /* Int.swift */; };
+		B533986D1D111F4F005C8EEA /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533985E1D111F4F005C8EEA /* JSONFile.swift */; };
+		B533986E1D111F4F005C8EEA /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533985F1D111F4F005C8EEA /* JSONResource.swift */; };
+		B533986F1D111F4F005C8EEA /* LocalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398601D111F4F005C8EEA /* LocalResource.swift */; };
+		B53398701D111F4F005C8EEA /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398611D111F4F005C8EEA /* Resource.swift */; };
+		B53398711D111F4F005C8EEA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398621D111F4F005C8EEA /* Result.swift */; };
+		B53398721D111F4F005C8EEA /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398631D111F4F005C8EEA /* Tag.swift */; };
+		B53398731D111F4F005C8EEA /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398641D111F4F005C8EEA /* URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +91,21 @@
 		B3D5DD541D109790000522BC /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		B3D5DD591D10AB7C000522BC /* InformationListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationListTableViewController.swift; sourceTree = "<group>"; };
 		B3D5DD5B1D10ADFC000522BC /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		B53398561D111F4F005C8EEA /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		B53398571D111F4F005C8EEA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		B53398581D111F4F005C8EEA /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		B53398591D111F4F005C8EEA /* Diagnose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnose.swift; sourceTree = "<group>"; };
+		B533985A1D111F4F005C8EEA /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		B533985B1D111F4F005C8EEA /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
+		B533985C1D111F4F005C8EEA /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		B533985D1D111F4F005C8EEA /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		B533985E1D111F4F005C8EEA /* JSONFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
+		B533985F1D111F4F005C8EEA /* JSONResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
+		B53398601D111F4F005C8EEA /* LocalResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalResource.swift; sourceTree = "<group>"; };
+		B53398611D111F4F005C8EEA /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		B53398621D111F4F005C8EEA /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B53398631D111F4F005C8EEA /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		B53398641D111F4F005C8EEA /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,38 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B307112D1D0AF737008FBE31 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				B3D5DD4E1D107B72000522BC /* JSONFile.swift */,
-				B30711321D0AFB1C008FBE31 /* JSONResource.swift */,
-				B30711391D0AFD9E008FBE31 /* Resource.swift */,
-				B307113B1D0AFE95008FBE31 /* LocalResource.swift */,
-			);
-			name = JSON;
-			sourceTree = "<group>";
-		};
-		B30711361D0AFD70008FBE31 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				B30711371D0AFD87008FBE31 /* Content.swift */,
-			);
-			name = Content;
-			sourceTree = "<group>";
-		};
-		B3928B501D09E2BD00E839E0 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				B307B9BE1D105D5A008DC73E /* Hint.swift */,
-				B307B9C01D105F24008DC73E /* URL.swift */,
-				B307B9C21D105F2D008DC73E /* Tag.swift */,
-				B307B9C41D105F5C008DC73E /* Collection.swift */,
-				B3D5DD501D107E4A000522BC /* Contact.swift */,
-				B3D5DD5B1D10ADFC000522BC /* Information.swift */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
 		B3AB06EE1CC01A6C001D3AC1 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +138,7 @@
 		B3AB06F91CC01A6C001D3AC1 /* FH-Survival */ = {
 			isa = PBXGroup;
 			children = (
-				B3AB07221CC01EC7001D3AC1 /* Model */,
+				B53398551D111F2A005C8EEA /* Model */,
 				B3AB070C1CC01D89001D3AC1 /* View Controller */,
 				B3D5DD561D109798000522BC /* Views */,
 				B3AB07211CC01EBC001D3AC1 /* Storyboards */,
@@ -176,17 +174,6 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		B5386A1C1CD0D84E00F651C2 /* Other Stuff */ = {
-			isa = PBXGroup;
-			children = (
-				B30711361D0AFD70008FBE31 /* Content */,
-				B307112D1D0AF737008FBE31 /* JSON */,
-				B3928B501D09E2BD00E839E0 /* Data */,
-				B3D5DD581D109A3E000522BC /* Helper */,
-			);
-			name = "Other Stuff";
-			sourceTree = "<group>";
-		};
 		B3D5DD561D109798000522BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,15 +193,58 @@
 			name = Files;
 			sourceTree = "<group>";
 		};
-		B3D5DD581D109A3E000522BC /* Helper */ = {
+		B53398551D111F2A005C8EEA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B30711341D0AFC0E008FBE31 /* Error.swift */,
-				B3AA4C4D1D0B54D500B2303B /* Diagnose.swift */,
-				B3D5DD4C1D107A64000522BC /* Int.swift */,
-				B3D5DD521D10858B000522BC /* Result.swift */,
+				B53398751D111F9E005C8EEA /* Data */,
+				B53398741D111F89005C8EEA /* Helper */,
+				B53398761D111FB6005C8EEA /* JSON */,
+				B53398771D111FBD005C8EEA /* Resources */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B53398741D111F89005C8EEA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B53398591D111F4F005C8EEA /* Diagnose.swift */,
+				B533985A1D111F4F005C8EEA /* Error.swift */,
+				B533985D1D111F4F005C8EEA /* Int.swift */,
+				B53398621D111F4F005C8EEA /* Result.swift */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		B53398751D111F9E005C8EEA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B53398581D111F4F005C8EEA /* Content.swift */,
+				B53398561D111F4F005C8EEA /* Collection.swift */,
+				B53398571D111F4F005C8EEA /* Contact.swift */,
+				B533985B1D111F4F005C8EEA /* Hint.swift */,
+				B533985C1D111F4F005C8EEA /* Information.swift */,
+				B53398631D111F4F005C8EEA /* Tag.swift */,
+				B53398641D111F4F005C8EEA /* URL.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		B53398761D111FB6005C8EEA /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				B533985E1D111F4F005C8EEA /* JSONFile.swift */,
+				B533985F1D111F4F005C8EEA /* JSONResource.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		B53398771D111FBD005C8EEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B53398601D111F4F005C8EEA /* LocalResource.swift */,
+				B53398611D111F4F005C8EEA /* Resource.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,20 +326,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				B307113A1D0AFD9E008FBE31 /* Resource.swift in Sources */,
+				B53398721D111F4F005C8EEA /* Tag.swift in Sources */,
+				B533986F1D111F4F005C8EEA /* LocalResource.swift in Sources */,
+				B53398681D111F4F005C8EEA /* Diagnose.swift in Sources */,
+				B533986E1D111F4F005C8EEA /* JSONResource.swift in Sources */,
 				B3D5DD511D107E4A000522BC /* Contact.swift in Sources */,
+				B533986D1D111F4F005C8EEA /* JSONFile.swift in Sources */,
+				B53398661D111F4F005C8EEA /* Contact.swift in Sources */,
 				B30711331D0AFB1C008FBE31 /* JSONResource.swift in Sources */,
+				B533986C1D111F4F005C8EEA /* Int.swift in Sources */,
 				B3AB07141CC01E0C001D3AC1 /* SearchViewController.swift in Sources */,
 				B307B9C11D105F24008DC73E /* URL.swift in Sources */,
 				B3AA4C4E1D0B54D500B2303B /* Diagnose.swift in Sources */,
+				B53398671D111F4F005C8EEA /* Content.swift in Sources */,
+				B53398701D111F4F005C8EEA /* Resource.swift in Sources */,
 				B3D5DD531D10858B000522BC /* Result.swift in Sources */,
 				B3AB07101CC01DD5001D3AC1 /* OrganisationViewController.swift in Sources */,
 				B3D5DD4D1D107A64000522BC /* Int.swift in Sources */,
+				B53398691D111F4F005C8EEA /* Error.swift in Sources */,
+				B53398711D111F4F005C8EEA /* Result.swift in Sources */,
 				B307B9BF1D105D5A008DC73E /* Hint.swift in Sources */,
+				B533986A1D111F4F005C8EEA /* Hint.swift in Sources */,
 				B307B9C51D105F5C008DC73E /* Collection.swift in Sources */,
 				B3D5DD5C1D10ADFC000522BC /* Information.swift in Sources */,
 				B3AB07121CC01E00001D3AC1 /* HintsViewController.swift in Sources */,
+				B53398731D111F4F005C8EEA /* URL.swift in Sources */,
+				B533986B1D111F4F005C8EEA /* Information.swift in Sources */,
 				B3AB07161CC01E32001D3AC1 /* ContactsViewController.swift in Sources */,
 				B30711381D0AFD87008FBE31 /* Content.swift in Sources */,
+				B53398651D111F4F005C8EEA /* Collection.swift in Sources */,
 				B3AB070E1CC01DC3001D3AC1 /* IntroductionViewController.swift in Sources */,
 				B3AB06FB1CC01A6C001D3AC1 /* AppDelegate.swift in Sources */,
 				B307B9C31D105F2D008DC73E /* Tag.swift in Sources */,
