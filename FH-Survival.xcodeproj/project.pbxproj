@@ -72,17 +72,14 @@
 		B3AB06F91CC01A6C001D3AC1 /* FH-Survival */ = {
 			isa = PBXGroup;
 			children = (
-				B3AB07221CC01EC7001D3AC1 /* Model */,
 				B3AB07211CC01EBC001D3AC1 /* Storyboards */,
-				B3AB070C1CC01D89001D3AC1 /* View Controllers */,
-				B3AB06FA1CC01A6C001D3AC1 /* AppDelegate.swift */,
-				B3B681C61CC02F8D00958F22 /* Assets.xcassets */,
-				B3AB07061CC01A6C001D3AC1 /* Info.plist */,
+				B3AB070C1CC01D89001D3AC1 /* ViewController */,
+				B5386A1C1CD0D84E00F651C2 /* Other Stuff */,
 			);
 			path = "FH-Survival";
 			sourceTree = "<group>";
 		};
-		B3AB070C1CC01D89001D3AC1 /* View Controllers */ = {
+		B3AB070C1CC01D89001D3AC1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B3AB070F1CC01DD5001D3AC1 /* OrganisationViewController.swift */,
@@ -91,14 +88,14 @@
 				B3AB07131CC01E0C001D3AC1 /* SearchViewController.swift */,
 				B3AB07151CC01E32001D3AC1 /* ContactsViewController.swift */,
 			);
-			name = "View Controllers";
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		B3AB07211CC01EBC001D3AC1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				B3AB06FE1CC01A6C001D3AC1 /* Main.storyboard */,
 				B3AB07031CC01A6C001D3AC1 /* LaunchScreen.storyboard */,
+				B3AB06FE1CC01A6C001D3AC1 /* Main.storyboard */,
 				B3AB07171CC01E6B001D3AC1 /* Introduction.storyboard */,
 				B3AB07191CC01E8F001D3AC1 /* Organisation.storyboard */,
 				B3AB071B1CC01E95001D3AC1 /* Search.storyboard */,
@@ -108,11 +105,14 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		B3AB07221CC01EC7001D3AC1 /* Model */ = {
+		B5386A1C1CD0D84E00F651C2 /* Other Stuff */ = {
 			isa = PBXGroup;
 			children = (
+				B3AB06FA1CC01A6C001D3AC1 /* AppDelegate.swift */,
+				B3B681C61CC02F8D00958F22 /* Assets.xcassets */,
+				B3AB07061CC01A6C001D3AC1 /* Info.plist */,
 			);
-			name = Model;
+			name = "Other Stuff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
