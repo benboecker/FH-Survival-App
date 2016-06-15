@@ -8,20 +8,56 @@
 
 import UIKit
 
-class ContactsViewController: UIViewController {
+class ContactsViewController: InformationListTableViewController<ContactTableViewCell> {
 
+	var content: Content? {
+		didSet {
+			self.tableView.reloadData()
+		}
+	}
+	private var sortOption: ContactSortOption = .Title {
+		didSet {
+			self.tableView.reloadData()
+		}
+	}
+	private var contacts: [Contact] {
+		guard let content = self.content else { return [] }
+		return content.getAllContacts(self.sortOption)
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
+		
+		self.tableView.estimatedRowHeight = 60
+		self.tableView.rowHeight = UITableViewAutomaticDimension
+		
+		
+		
+	
+	}
+//
+//	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//		return self.contacts.count
+//	}
+//	
+//	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//		guard let cell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath) as? ContactTableViewCell else { return UITableViewCell() }
+//		
+//		cell.configureWithContact(self.contacts[indexPath.row])
+//		
+//		return cell
+//	}
+	
+	
+	@IBAction func segmentedControlTapped(sender: UISegmentedControl) {
+		if (sender.selectedSegmentIndex == 0) {
+			self.sortOption = .Title
+		} else {
+			self.sortOption = .Location
+		}
+		
+	}
+	
     /*
     // MARK: - Navigation
 

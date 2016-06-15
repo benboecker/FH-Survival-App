@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OF5-nY-xsM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OF5-nY-xsM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -24,17 +24,17 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhf-qu-Nbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="604"/>
+            <point key="canvasLocation" x="281" y="604"/>
         </scene>
         <!--Introduction-->
         <scene sceneID="E4Y-f2-tZY">
             <objects>
                 <viewControllerPlaceholder storyboardName="Introduction" id="SY6-Ga-NsM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Start" image="home" selectedImage="contacts" id="FnP-zP-HEF"/>
+                    <tabBarItem key="tabBarItem" title="Start" image="home" id="FnP-zP-HEF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZD-tn-A9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902.5" y="340"/>
+            <point key="canvasLocation" x="972.5" y="318"/>
         </scene>
         <!--Organisation-->
         <scene sceneID="f2k-YW-X5E">
@@ -44,7 +44,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iF-Jg-TKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="473"/>
+            <point key="canvasLocation" x="974" y="456"/>
         </scene>
         <!--Search-->
         <scene sceneID="qcN-4s-bdX">
@@ -54,7 +54,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ar-1y-ONC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.5" y="605"/>
+            <point key="canvasLocation" x="956.5" y="604"/>
         </scene>
         <!--Hints-->
         <scene sceneID="v51-82-Ifu">
@@ -64,17 +64,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sec-5O-nQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881.5" y="741"/>
+            <point key="canvasLocation" x="951.5" y="754"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="VW0-5P-Ew7">
             <objects>
                 <viewControllerPlaceholder storyboardName="Contacts" id="lsf-Qp-PfI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kontakte" image="contacts" id="WNg-SL-JeE"/>
+                    <tabBarItem key="tabBarItem" title="Wo ist was?" image="contacts" id="WNg-SL-JeE"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mT-Id-ZyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892.5" y="883"/>
+            <point key="canvasLocation" x="962.5" y="890"/>
         </scene>
     </scenes>
     <resources>
