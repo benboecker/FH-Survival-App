@@ -16,29 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		
-		Content.loadContent { (result) in
-			switch result {
-			case let .Success(content):
-				guard let tabBarController = self.window?.rootViewController as? UITabBarController,
-				let viewControllers = tabBarController.viewControllers
-				else {
-					return
-				}
-				
-				for viewController in viewControllers {
-					if let navViewController = viewController as? UINavigationController,
-					let viewController = navViewController.viewControllers.first as? ContactsViewController {
-						viewController.content = content
-					}
-				}
-				
-				break
-			case let .Failure(error):
-				print(error.message)
-				break
+		let content = Content()
+		
+		guard
+			let tabBarController = self.window?.rootViewController as? UITabBarController,
+			let viewControllers = tabBarController.viewControllers
+			else { return true }
+		
+		for viewController in viewControllers {
+			if let navViewController = viewController as? UINavigationController,
+				var viewController = navViewController.viewControllers.first as? ContentListViewController {
+				viewController.content = content
 			}
 		}
-		
 		
 		return true
 	}

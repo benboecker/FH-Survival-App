@@ -8,18 +8,16 @@
 
 import UIKit
 
-class ContactsViewController: InformationListTableViewController<ContactTableViewCell> {
+class ContactsViewController: UITableViewController, ContentListViewController {
 
-	var content: Content? {
-		didSet {
-			self.tableView.reloadData()
-		}
-	}
+	var content: Content?
+	
 	private var sortOption: ContactSortOption = .Title {
 		didSet {
 			self.tableView.reloadData()
 		}
 	}
+	
 	private var contacts: [Contact] {
 		guard let content = self.content else { return [] }
 		return content.getAllContacts(self.sortOption)
@@ -31,23 +29,21 @@ class ContactsViewController: InformationListTableViewController<ContactTableVie
 		self.tableView.estimatedRowHeight = 60
 		self.tableView.rowHeight = UITableViewAutomaticDimension
 		
-		
-		
-	
+		self.loadContent()
 	}
-//
-//	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//		return self.contacts.count
-//	}
-//	
-//	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//		guard let cell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath) as? ContactTableViewCell else { return UITableViewCell() }
-//		
-//		cell.configureWithContact(self.contacts[indexPath.row])
-//		
-//		return cell
-//	}
+
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.contacts.count
+	}
 	
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath) as? HeadlineTableViewCell
+			else { return UITableViewCell() }
+		
+		cell.configureWithContact(self.contacts[indexPath.row])
+		
+		return cell
+	}
 	
 	@IBAction func segmentedControlTapped(sender: UISegmentedControl) {
 		if (sender.selectedSegmentIndex == 0) {

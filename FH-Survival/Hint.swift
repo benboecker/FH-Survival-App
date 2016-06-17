@@ -18,7 +18,7 @@ struct Hint: Information {
 	let tags: [Tag]
 	let urls: [URL]
 	
-	init? (json: [String: AnyObject], tags: Collection<Tag>) {
+	init? (json: [String: AnyObject], tags: Collection) {
 		guard let text = json["text"] as? String else { return nil }
 		
 		self.id = json["id"] as? Int ?? Int.random(0...100000)
@@ -28,7 +28,7 @@ struct Hint: Information {
 		var infoTags: [Tag] = []
 		if let jsonTagIDs = json["tags"] as? [Int] {
 			for tagID in jsonTagIDs {
-				if let tag = tags.getItemByID(tagID) {
+				if let tag = tags.getItemByID(tagID) as? Tag {
 					infoTags.append(tag)
 				}
 			}

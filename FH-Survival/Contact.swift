@@ -23,7 +23,7 @@ struct Contact: Information {
 	let tags: [Tag]
 	let urls: [URL]
 	
-	init (json: [String: AnyObject], tags: Collection<Tag>) {
+	init (json: [String: AnyObject], tags: Collection) {
 		self.id = json["id"] as? Int ?? Int.random(0...100000)
 		self.title = json["title"] as? String ?? ""
 		self.location = json["location"] as? String ?? ""
@@ -33,7 +33,7 @@ struct Contact: Information {
 		var infoTags: [Tag] = []
 		if let jsonTagIDs = json["tags"] as? [Int] {
 			for tagID in jsonTagIDs {
-				if let tag = tags.getItemByID(tagID) {
+				if let tag = tags.getItemByID(tagID) as? Tag {
 					infoTags.append(tag)
 				}
 			}
