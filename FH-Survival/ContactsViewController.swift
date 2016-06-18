@@ -8,10 +8,8 @@
 
 import UIKit
 
-class ContactsViewController: UITableViewController, ContentListViewController {
+class ContactsViewController: UITableViewController, ContentViewController {
 
-	var content: Content?
-	
 	private var sortOption: ContactSortOption = .Title {
 		didSet {
 			self.tableView.reloadData()
@@ -19,8 +17,7 @@ class ContactsViewController: UITableViewController, ContentListViewController {
 	}
 	
 	private var contacts: [Contact] {
-		guard let content = self.content else { return [] }
-		return content.getAllContacts(self.sortOption)
+		return self.content.getAllContacts(self.sortOption)
 	}
 	
     override func viewDidLoad() {
@@ -28,7 +25,7 @@ class ContactsViewController: UITableViewController, ContentListViewController {
 		
 		self.tableView.estimatedRowHeight = 60
 		self.tableView.rowHeight = UITableViewAutomaticDimension
-		
+
 		self.loadContent()
 	}
 

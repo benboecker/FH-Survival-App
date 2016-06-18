@@ -16,16 +16,24 @@ protocol ErrorDescription {
 
 enum Error: ErrorDescription {
 	case JSONParsingError
+	case Unknown(String, String)
 }
 
 extension Error {
 	var title: String {
-		return ""
+		switch self {
+		case .JSONParsingError:
+			return "Fehler"
+		case let .Unknown(aTitle, _):
+			return aTitle
+		}
 	}
 	var message: String {
 		switch self {
 		case .JSONParsingError:
 			return "Error parsing JSON"
+		case let .Unknown(_, aMessage):
+			return aMessage
 		}
 	}
 }

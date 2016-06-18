@@ -8,20 +8,24 @@
 
 import UIKit
 
-protocol ContentListViewController {
-	var content: Content? { get set }
+protocol ContentViewController: ErrorViewController {
+	var content: Content { get }
 }
 
-extension ContentListViewController where Self: UITableViewController {
+extension ContentViewController {
+	var content: Content {
+		return Content.sharedInstance
+	}
+}
+
+extension ContentViewController where Self: UITableViewController {
 	func loadContent() {
-		guard let content = self.content else { return }
-		
-		content.loadContent { (result) in
+		self.content.loadContent { (result) in
 			switch result {
 			case .Success(_):
 				self.tableView.reloadData()
 			case let .Failure(error):
-				print(error.message)
+				self.showAlertViewWithError(error)
 				break
 			}
 		}

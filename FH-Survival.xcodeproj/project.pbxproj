@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B307112C1D0A98D9008FBE31 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = B307112B1D0A98D9008FBE31 /* content.json */; };
+		B3675C4C1D159B0700BD993E /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3675C4B1D159B0700BD993E /* ErrorViewController.swift */; };
 		B3AB06FB1CC01A6C001D3AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB06FA1CC01A6C001D3AC1 /* AppDelegate.swift */; };
 		B3AB07001CC01A6C001D3AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB06FE1CC01A6C001D3AC1 /* Main.storyboard */; };
 		B3AB07051CC01A6C001D3AC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB07031CC01A6C001D3AC1 /* LaunchScreen.storyboard */; };
@@ -38,11 +39,12 @@
 		B53398711D111F4F005C8EEA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398621D111F4F005C8EEA /* Result.swift */; };
 		B53398721D111F4F005C8EEA /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398631D111F4F005C8EEA /* Tag.swift */; };
 		B53398731D111F4F005C8EEA /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398641D111F4F005C8EEA /* URL.swift */; };
-		B5467B711D11855A005294CB /* ContentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5467B701D11855A005294CB /* ContentListViewController.swift */; };
+		B5467B711D11855A005294CB /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5467B701D11855A005294CB /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B307112B1D0A98D9008FBE31 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		B3675C4B1D159B0700BD993E /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		B3AB06F71CC01A6C001D3AC1 /* FH-Survival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH-Survival.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AB06FA1CC01A6C001D3AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3AB06FF1CC01A6C001D3AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		B53398621D111F4F005C8EEA /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B53398631D111F4F005C8EEA /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		B53398641D111F4F005C8EEA /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
-		B5467B701D11855A005294CB /* ContentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentListViewController.swift; sourceTree = "<group>"; };
+		B5467B701D11855A005294CB /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +122,13 @@
 		B3AB070C1CC01D89001D3AC1 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B3AB070F1CC01DD5001D3AC1 /* OrganisationViewController.swift */,
 				B3AB070D1CC01DC3001D3AC1 /* IntroductionViewController.swift */,
-				B3AB07111CC01E00001D3AC1 /* HintsViewController.swift */,
+				B3AB070F1CC01DD5001D3AC1 /* OrganisationViewController.swift */,
 				B3AB07131CC01E0C001D3AC1 /* SearchViewController.swift */,
+				B3AB07111CC01E00001D3AC1 /* HintsViewController.swift */,
 				B3AB07151CC01E32001D3AC1 /* ContactsViewController.swift */,
-				B5467B701D11855A005294CB /* ContentListViewController.swift */,
+				B5467B701D11855A005294CB /* ContentViewController.swift */,
+				B3675C4B1D159B0700BD993E /* ErrorViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -303,11 +306,12 @@
 				B53398661D111F4F005C8EEA /* Contact.swift in Sources */,
 				B533986C1D111F4F005C8EEA /* Int.swift in Sources */,
 				B3AB07141CC01E0C001D3AC1 /* SearchViewController.swift in Sources */,
-				B5467B711D11855A005294CB /* ContentListViewController.swift in Sources */,
+				B5467B711D11855A005294CB /* ContentViewController.swift in Sources */,
 				B53398671D111F4F005C8EEA /* Content.swift in Sources */,
 				B53398701D111F4F005C8EEA /* Resource.swift in Sources */,
 				B3AB07101CC01DD5001D3AC1 /* OrganisationViewController.swift in Sources */,
 				B53398691D111F4F005C8EEA /* Error.swift in Sources */,
+				B3675C4C1D159B0700BD993E /* ErrorViewController.swift in Sources */,
 				B53398711D111F4F005C8EEA /* Result.swift in Sources */,
 				B533986A1D111F4F005C8EEA /* Hint.swift in Sources */,
 				B3AB07121CC01E00001D3AC1 /* HintsViewController.swift in Sources */,

@@ -11,6 +11,8 @@ import UIKit
 typealias CompletionHandler = (Result<Content> -> ())
 
 class Content {
+	static let sharedInstance = Content()
+
 	private var tagCollection: Collection = Collection()
 	private var hintCollection: Collection = Collection()
 	private var contactsCollection: Collection = Collection()
@@ -20,8 +22,11 @@ class Content {
 			if !isLoading { self.completionHandlers = [] }
 		}
 	}
+
 	private var completionHandlers: [CompletionHandler] = []
-	
+
+	private init() {}
+
 	func loadContent(completion: CompletionHandler) {
 		func loadCompleted(result: Result<Content>) {
 			dispatch_async(dispatch_get_main_queue()) {
@@ -39,7 +44,11 @@ class Content {
 		}
 		
 		self.isLoading = true
-		
+
+		self.tagCollection = Collection()
+		self.hintCollection = Collection()
+		self.contactsCollection = Collection()
+
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
 			let jsonFile = JSONFile()
 			
@@ -66,7 +75,6 @@ class Content {
 				guard let info = Hint(json: jsonInfo, tags: self.tagCollection) else {
 					loadCompleted(.Failure(.JSONParsingError))
 
-					
 					return
 				}
 				
@@ -84,7 +92,7 @@ class Content {
 	
 	func getAllContacts(sortedBy: ContactSortOption = .Title) -> [Contact] {
 		var contacts: [Contact] = []
-		
+
 		for item in self.contactsCollection.allItems {
 			if let contact = item as? Contact {
 				contacts.append(contact)

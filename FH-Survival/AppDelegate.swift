@@ -15,21 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		
-		let content = Content()
-		
-		guard
-			let tabBarController = self.window?.rootViewController as? UITabBarController,
-			let viewControllers = tabBarController.viewControllers
-			else { return true }
-		
-		for viewController in viewControllers {
-			if let navViewController = viewController as? UINavigationController,
-				var viewController = navViewController.viewControllers.first as? ContentListViewController {
-				viewController.content = content
-			}
-		}
-		
+	
 		return true
 	}
 

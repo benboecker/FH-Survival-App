@@ -8,12 +8,10 @@
 
 import UIKit
 
-class HintsViewController: UITableViewController, ContentListViewController {
+class HintsViewController: UITableViewController, ContentViewController {
 
-	var content: Content?
 	var hints: [Hint] {
-		guard let content = self.content else { return [] }
-		return content.getAllHints()
+		return self.content.getAllHints()
 	}
 	
 	override func viewDidLoad() {
@@ -21,7 +19,7 @@ class HintsViewController: UITableViewController, ContentListViewController {
 		
 		self.tableView.estimatedRowHeight = 60
 		self.tableView.rowHeight = UITableViewAutomaticDimension
-		
+
 		self.loadContent()
 	}
 	
