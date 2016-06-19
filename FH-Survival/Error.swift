@@ -24,16 +24,16 @@ extension Error {
 		switch self {
 		case .JSONParsingError:
 			return "Fehler"
-		case let .Unknown(aTitle, _):
-			return aTitle
+		case let .Unknown(errorTitle, _):
+			return errorTitle
 		}
 	}
 	var message: String {
 		switch self {
 		case .JSONParsingError:
 			return "Error parsing JSON"
-		case let .Unknown(_, aMessage):
-			return aMessage
+		case let .Unknown(_, errorMessage):
+			return errorMessage
 		}
 	}
 }

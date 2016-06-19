@@ -23,6 +23,15 @@
 		B3AB071E1CC01E9B001D3AC1 /* Hints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB071D1CC01E9B001D3AC1 /* Hints.storyboard */; };
 		B3AB07201CC01EA4001D3AC1 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AB071F1CC01EA4001D3AC1 /* Contacts.storyboard */; };
 		B3B681C71CC02F8D00958F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B681C61CC02F8D00958F22 /* Assets.xcassets */; };
+		B3C1B3971D16E5F000295AAA /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B3961D16E5F000295AAA /* ColorScheme.swift */; };
+		B3C1B3991D16E62F00295AAA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B3981D16E62F00295AAA /* UIColor.swift */; };
+		B3C1B39C1D16E83700295AAA /* Styled.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B39B1D16E83700295AAA /* Styled.swift */; };
+		B3C1B3A01D16EA8E00295AAA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B39F1D16EA8E00295AAA /* UIView.swift */; };
+		B3C1B3A21D16EE2000295AAA /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B3A11D16EE2000295AAA /* ContactViewController.swift */; };
+		B3C1B3A41D16F03700295AAA /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B3A31D16F03700295AAA /* ContactTableViewCell.swift */; };
+		B3C1B3A61D16F1D900295AAA /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B3A51D16F1D900295AAA /* ImageTableViewCell.swift */; };
+		B3C1B3A81D16FC9A00295AAA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B3A71D16FC9A00295AAA /* UIImage.swift */; };
+		B3C1B3AD1D171EE000295AAA /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1B3AC1D171EE000295AAA /* HintViewController.swift */; };
 		B3D5DD551D109790000522BC /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D5DD541D109790000522BC /* HeadlineTableViewCell.swift */; };
 		B53398651D111F4F005C8EEA /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398561D111F4F005C8EEA /* Collection.swift */; };
 		B53398661D111F4F005C8EEA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53398571D111F4F005C8EEA /* Contact.swift */; };
@@ -61,6 +70,15 @@
 		B3AB071D1CC01E9B001D3AC1 /* Hints.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hints.storyboard; sourceTree = "<group>"; };
 		B3AB071F1CC01EA4001D3AC1 /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		B3B681C61CC02F8D00958F22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3C1B3961D16E5F000295AAA /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		B3C1B3981D16E62F00295AAA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B3C1B39B1D16E83700295AAA /* Styled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styled.swift; sourceTree = "<group>"; };
+		B3C1B39F1D16EA8E00295AAA /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B3C1B3A11D16EE2000295AAA /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		B3C1B3A31D16F03700295AAA /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		B3C1B3A51D16F1D900295AAA /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		B3C1B3A71D16FC9A00295AAA /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		B3C1B3AC1D171EE000295AAA /* HintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
 		B3D5DD541D109790000522BC /* HeadlineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineTableViewCell.swift; sourceTree = "<group>"; };
 		B53398561D111F4F005C8EEA /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		B53398571D111F4F005C8EEA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -122,13 +140,12 @@
 		B3AB070C1CC01D89001D3AC1 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B3C1B3A91D16FDEC00295AAA /* Protocols */,
 				B3AB070D1CC01DC3001D3AC1 /* IntroductionViewController.swift */,
 				B3AB070F1CC01DD5001D3AC1 /* OrganisationViewController.swift */,
 				B3AB07131CC01E0C001D3AC1 /* SearchViewController.swift */,
-				B3AB07111CC01E00001D3AC1 /* HintsViewController.swift */,
-				B3AB07151CC01E32001D3AC1 /* ContactsViewController.swift */,
-				B5467B701D11855A005294CB /* ContentViewController.swift */,
-				B3675C4B1D159B0700BD993E /* ErrorViewController.swift */,
+				B3C1B3AB1D171EBF00295AAA /* Hints */,
+				B3C1B3AA1D16FDF700295AAA /* Contacts */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -147,10 +164,59 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		B3C1B3951D16E5E100295AAA /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				B3C1B3961D16E5F000295AAA /* ColorScheme.swift */,
+				B3C1B39B1D16E83700295AAA /* Styled.swift */,
+			);
+			name = Appearance;
+			sourceTree = "<group>";
+		};
+		B3C1B39A1D16E64E00295AAA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B533985D1D111F4F005C8EEA /* Int.swift */,
+				B3C1B3981D16E62F00295AAA /* UIColor.swift */,
+				B3C1B39F1D16EA8E00295AAA /* UIView.swift */,
+				B3C1B3A71D16FC9A00295AAA /* UIImage.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		B3C1B3A91D16FDEC00295AAA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B5467B701D11855A005294CB /* ContentViewController.swift */,
+				B3675C4B1D159B0700BD993E /* ErrorViewController.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B3C1B3AA1D16FDF700295AAA /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B3AB07151CC01E32001D3AC1 /* ContactsViewController.swift */,
+				B3C1B3A11D16EE2000295AAA /* ContactViewController.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		B3C1B3AB1D171EBF00295AAA /* Hints */ = {
+			isa = PBXGroup;
+			children = (
+				B3AB07111CC01E00001D3AC1 /* HintsViewController.swift */,
+				B3C1B3AC1D171EE000295AAA /* HintViewController.swift */,
+			);
+			name = Hints;
+			sourceTree = "<group>";
+		};
 		B3D5DD561D109798000522BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B3D5DD541D109790000522BC /* HeadlineTableViewCell.swift */,
+				B3C1B3A31D16F03700295AAA /* ContactTableViewCell.swift */,
+				B3C1B3A51D16F1D900295AAA /* ImageTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -169,11 +235,12 @@
 		B53398551D111F2A005C8EEA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B53398581D111F4F005C8EEA /* Content.swift */,
+				B3C1B3951D16E5E100295AAA /* Appearance */,
 				B53398751D111F9E005C8EEA /* Data */,
 				B53398741D111F89005C8EEA /* Helper */,
 				B53398761D111FB6005C8EEA /* JSON */,
 				B53398771D111FBD005C8EEA /* Resources */,
+				B3C1B39A1D16E64E00295AAA /* Extensions */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -183,7 +250,6 @@
 			children = (
 				B53398591D111F4F005C8EEA /* Diagnose.swift */,
 				B533985A1D111F4F005C8EEA /* Error.swift */,
-				B533985D1D111F4F005C8EEA /* Int.swift */,
 				B53398621D111F4F005C8EEA /* Result.swift */,
 			);
 			name = Helper;
@@ -205,6 +271,7 @@
 		B53398761D111FB6005C8EEA /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				B53398581D111F4F005C8EEA /* Content.swift */,
 				B533985E1D111F4F005C8EEA /* JSONFile.swift */,
 				B533985F1D111F4F005C8EEA /* JSONResource.swift */,
 			);
@@ -252,7 +319,6 @@
 				TargetAttributes = {
 					B3AB06F61CC01A6C001D3AC1 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = CQSM9HEZ7S;
 					};
 				};
 			};
@@ -298,14 +364,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C1B39C1D16E83700295AAA /* Styled.swift in Sources */,
 				B53398721D111F4F005C8EEA /* Tag.swift in Sources */,
 				B533986F1D111F4F005C8EEA /* LocalResource.swift in Sources */,
 				B53398681D111F4F005C8EEA /* Diagnose.swift in Sources */,
+				B3C1B3A01D16EA8E00295AAA /* UIView.swift in Sources */,
 				B533986E1D111F4F005C8EEA /* JSONResource.swift in Sources */,
+				B3C1B3A41D16F03700295AAA /* ContactTableViewCell.swift in Sources */,
 				B533986D1D111F4F005C8EEA /* JSONFile.swift in Sources */,
 				B53398661D111F4F005C8EEA /* Contact.swift in Sources */,
+				B3C1B3A81D16FC9A00295AAA /* UIImage.swift in Sources */,
+				B3C1B3AD1D171EE000295AAA /* HintViewController.swift in Sources */,
+				B3C1B3971D16E5F000295AAA /* ColorScheme.swift in Sources */,
 				B533986C1D111F4F005C8EEA /* Int.swift in Sources */,
 				B3AB07141CC01E0C001D3AC1 /* SearchViewController.swift in Sources */,
+				B3C1B3991D16E62F00295AAA /* UIColor.swift in Sources */,
+				B3C1B3A21D16EE2000295AAA /* ContactViewController.swift in Sources */,
 				B5467B711D11855A005294CB /* ContentViewController.swift in Sources */,
 				B53398671D111F4F005C8EEA /* Content.swift in Sources */,
 				B53398701D111F4F005C8EEA /* Resource.swift in Sources */,
@@ -319,6 +393,7 @@
 				B533986B1D111F4F005C8EEA /* Information.swift in Sources */,
 				B3AB07161CC01E32001D3AC1 /* ContactsViewController.swift in Sources */,
 				B53398651D111F4F005C8EEA /* Collection.swift in Sources */,
+				B3C1B3A61D16F1D900295AAA /* ImageTableViewCell.swift in Sources */,
 				B3AB070E1CC01DC3001D3AC1 /* IntroductionViewController.swift in Sources */,
 				B3AB06FB1CC01A6C001D3AC1 /* AppDelegate.swift in Sources */,
 				B3D5DD551D109790000522BC /* HeadlineTableViewCell.swift in Sources */,
@@ -436,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "FH-Survival/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ben-boecker.FH-Survival";
@@ -447,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "FH-Survival/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ben-boecker.FH-Survival";

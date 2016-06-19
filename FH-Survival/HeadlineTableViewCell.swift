@@ -21,4 +21,12 @@ class HeadlineTableViewCell: UITableViewCell {
 		self.headlineLabel.text = hint.title
 		self.bodyLabel.text = hint.text
 	}
+
+	override func updateStyle() {
+		super.updateStyle()
+
+		self.headlineLabel.textColor = ColorScheme.Primary
+		self.bodyLabel.textColor = ColorScheme.DarkText
+	}
+	
 }

@@ -35,7 +35,7 @@
 					"text": "An der Hochschule zu studieren bedeutet unter anderem: Ich bin selbst verantwortlich. Mit anderen Worten: Sich informieren, Organisieren und Motivieren sind drei wesentliche Aufgaben. Wichtig ist deshalb herauszu nden, was nötig ist und was man mit Blick auf das Studium will.",
 					"date": "2016-06-10",
 					"tags": [
-							 1
+							 1, 5
 							 ],
 					"urls": [
 							 {
@@ -374,12 +374,7 @@
 				 "tags": [
 						  2
 						  ],
-				 "urls": [
-						  {
-						  "title": "",
-						  "url": ""
-						  }
-						  ]
+				 "urls": []
 				 },{
 				 "title": "Einschreibebüro / Studierendensekretariat",
 				 "text": "",
@@ -407,7 +402,7 @@
 				 "urls": [
 						  {
 						  "title": "",
-						  "url": ""
+						  "url": "fsr-sozialwesen@fh-bielefeld.de"
 						  }
 						  ]
 				 },{

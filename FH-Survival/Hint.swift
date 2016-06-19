@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 struct Hint: Information {
 	var id: Int
 	let title: String
