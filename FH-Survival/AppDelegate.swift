@@ -11,12 +11,17 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-	var window: UIWindow?
+	var window: UIWindow? = UIWindow(frame: UIScreen.mainScreen().bounds)
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-		
+		let tabBarController = UITabBarController()
+
+
+
+		self.window?.rootViewController = tabBarController
+		self.window?.makeKeyAndVisible()
 
 		return true
 	}
