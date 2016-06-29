@@ -10,13 +10,17 @@ import UIKit
 
 typealias CompletionHandler = (Result<Content> -> ())
 
-class Content {
-	static let sharedInstance = Content()
+enum SortOption {
+	case Title, Location
+}
 
-	private var tagCollection: Collection = Collection()
-	private var hintCollection: Collection = Collection()
-	private var contactsCollection: Collection = Collection()
-	
+final class Content {
+	static let sharedInstance = Content()
+	private init() {}
+
+	private let webService: WebService = WebService()
+	private var information: [Information] = []
+
 	private var isLoading: Bool = false {
 		didSet {
 			if !isLoading { self.completionHandlers = [] }
@@ -24,17 +28,15 @@ class Content {
 	}
 
 	private var completionHandlers: [CompletionHandler] = []
+}
 
-	private init() {}
-
+extension Content {
 	func loadContent(completion: CompletionHandler) {
 		func loadCompleted(result: Result<Content>) {
-			dispatch_async(dispatch_get_main_queue()) {
-				for completionHandler in self.completionHandlers {
-					completionHandler(result)
-				}
-				self.isLoading = false
+			for completionHandler in self.completionHandlers {
+				completionHandler(result)
 			}
+			self.isLoading = false
 		}
 
 		self.completionHandlers.append(completion)
@@ -45,77 +47,39 @@ class Content {
 		
 		self.isLoading = true
 
-		self.tagCollection = Collection()
-		self.hintCollection = Collection()
-		self.contactsCollection = Collection()
-
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-			let jsonFile = JSONFile()
-			
-			guard
-				let jsonInformation = jsonFile["information"] as? [[String: AnyObject]],
-				let jsonTags = jsonFile["tags"] as? [[String: AnyObject]],
-				let jsonContacts = jsonFile["contacts"] as? [[String: AnyObject]]
-				else {
-					loadCompleted(.Failure(.JSONParsingError))
-					return
+		self.webService.load(Information.all) { (data) in
+			if let information = data {
+				self.information = information
+				loadCompleted(.Success(self))
+			} else {
+				loadCompleted(.Failure(.JSONParsingError))
 			}
-			
-			for jsonTag in jsonTags {
-				guard let tag = Tag(json: jsonTag) else {
-					loadCompleted(.Failure(.JSONParsingError))
-
-					return
-				}
-				
-				self.tagCollection.append(tag)
-			}
-			
-			for jsonInfo in jsonInformation {
-				guard let info = Hint(json: jsonInfo, tags: self.tagCollection) else {
-					loadCompleted(.Failure(.JSONParsingError))
-
-					return
-				}
-				
-				self.hintCollection.append(info)
-			}
-			
-			for jsonContact in jsonContacts {
-				let contact = Contact(json: jsonContact, tags: self.tagCollection)
-				self.contactsCollection.append(contact)
-			}
-			
-			loadCompleted(.Success(self))
 		}
 	}
-	
-	func getAllContacts(sortedBy: ContactSortOption = .Title) -> [Contact] {
-		var contacts: [Contact] = []
 
-		for item in self.contactsCollection.allItems {
-			if let contact = item as? Contact {
-				contacts.append(contact)
-			}
+	func getInformation(withTags: [Tag], sortOption: SortOption = .Title) -> [Information] {
+		var information: [Information] = []
+		let tagSet: Set<Tag> = Set(withTags)
+
+		for info in self.information where tagSet.intersect(info.tags).count > 0 {
+			information.append(info)
 		}
-		
-		switch sortedBy {
+
+		switch sortOption {
 		case .Title:
-			return contacts.sort({ $0.title < $1.title })
+			return information.sort({ $0.title < $1.title })
 		case .Location:
-			return contacts.sort({ $0.location < $1.location })
+			return information.sort({ $0.location < $1.location })
 		}
 	}
 
-	func getAllHints(withTag: Tag? = nil) -> [Hint] {
-		var hints: [Hint] = []
-		
-		for hint in self.hintCollection.allItems {
-			if let hint = hint as? Hint {
-				hints.append(hint)
-			}
+	func searchInformation(searchString: String) -> [Information] {
+		var information: [Information] = []
+
+		for info in self.information where info.text.containsString(searchString) || info.title.containsString(searchString) {
+			information.append(info)
 		}
 
-		return hints
+		return information.sort({ $0.title < $1.title })
 	}
 }

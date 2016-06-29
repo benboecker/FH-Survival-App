@@ -29,14 +29,14 @@ struct URL {
 	}
 
 	private func determineURLType() -> URLType {
-		if (self.checkForMail(self.url.absoluteString)) {
+		if (self.isMailAdress(self.url.absoluteString)) {
 			return .Mail
 		}
 
 		return .Web
 	}
 
-	private func checkForMail(mail: String) -> Bool {
+	private func isMailAdress(mail: String) -> Bool {
 		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
 		let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
 		return emailTest.evaluateWithObject(mail)

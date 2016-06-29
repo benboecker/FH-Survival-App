@@ -10,14 +10,14 @@ import UIKit
 
 class ContactsViewController: UITableViewController, ContentViewController {
 
-	private var sortOption: ContactSortOption = .Title {
+	private var sortOption: SortOption = .Title {
 		didSet {
 			self.tableView.reloadData()
 		}
 	}
 	
-	private var contacts: [Contact] {
-		return self.content.getAllContacts(self.sortOption)
+	private var contacts: [Information] {
+		return self.content.getInformation([.Contact], sortOption: self.sortOption)
 	}
 	
     override func viewDidLoad() {
@@ -27,6 +27,9 @@ class ContactsViewController: UITableViewController, ContentViewController {
 		self.tableView.rowHeight = UITableViewAutomaticDimension
 
 		self.loadContent()
+
+		self.title = "Wo ist was?"
+		self.navigationItem.titleView = UIView()
 	}
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

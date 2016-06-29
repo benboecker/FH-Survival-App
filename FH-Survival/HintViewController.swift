@@ -9,7 +9,7 @@
 import UIKit
 
 class HintViewController: UITableViewController {
-	var hint: Hint?
+	var hint: Information?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -45,12 +45,13 @@ class HintViewController: UITableViewController {
 		switch indexPath.section {
 		case 0:
 			guard
-				let cell = tableView.dequeueReusableCellWithIdentifier("headlineCell", forIndexPath: indexPath) as? HeadlineTableViewCell where diagnose(),
-				let hint = self.hint where diagnose()
+				let cell = tableView.dequeueReusableCellWithIdentifier("headlineCell", forIndexPath: indexPath) as? HeadlineTableViewCell,
+				let hint = self.hint
 				else { return UITableViewCell() }
 
-			cell.headlineLabel.text = hint.title
-			cell.bodyLabel.text = hint.text
+			cell.configureWithHint(hint)
+
+			cell.selectionStyle = .None
 
 			return cell
 		case 1:
@@ -64,9 +65,9 @@ class HintViewController: UITableViewController {
 
 			switch url.type {
 			case .Mail:
-				cell.setTintedImage(UIImage.Mail)
+				cell.setTintedImage(Asset.Icon.Mail)
 			case .Web:
-				cell.setTintedImage(UIImage.Web)
+				cell.setTintedImage(Asset.Icon.Web)
 			}
 			
 			return cell

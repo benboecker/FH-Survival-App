@@ -10,7 +10,7 @@ import UIKit
 
 class ContactViewController: UITableViewController {
 
-	var contact: Contact?
+	var contact: Information?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -59,6 +59,7 @@ class ContactViewController: UITableViewController {
 			cell.titleLabel.text = contact.title
 			cell.bodyTextLabel.text = contact.text
 			cell.locationLabel.text = contact.location
+			cell.selectionStyle = .None
 
 			return cell
 		case 1:
@@ -68,7 +69,7 @@ class ContactViewController: UITableViewController {
 				else { return UITableViewCell() }
 
 			cell.label.text = contact.phone
-			cell.setTintedImage(UIImage.Phone)
+			cell.setTintedImage(Asset.Icon.Phone)
 
 			return cell
 		case 2:
@@ -82,14 +83,28 @@ class ContactViewController: UITableViewController {
 
 			switch url.type {
 			case .Mail:
-				cell.setTintedImage(UIImage.Mail)
+				cell.setTintedImage(Asset.Icon.Mail)
 			case .Web:
-				cell.setTintedImage(UIImage.Web)
+				cell.setTintedImage(Asset.Icon.Web)
 			}
 
 			return cell
 		default:
 			return UITableViewCell()
 		}
+	}
+
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+		switch indexPath.section {
+		case 1:
+			break
+		case 2:
+			break
+		default:
+			break
+		}
+
 	}
 }

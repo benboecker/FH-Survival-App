@@ -20,6 +20,10 @@ class ContactTableViewCell: UITableViewCell {
 		self.titleLabel.textColor = ColorScheme.Primary
 		self.locationLabel.textColor = ColorScheme.LightText
 		self.bodyTextLabel.textColor = ColorScheme.DarkText
+
+		self.titleLabel.font = UIFont(textStyle: .Title1)
+		self.locationLabel.font = UIFont(textStyle: .Subheadline)
+		self.bodyTextLabel.font = UIFont(textStyle: .Body)
 	}
 
 	

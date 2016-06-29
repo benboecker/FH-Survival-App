@@ -1,14 +1,24 @@
 //
-//  sd.swift
+//  Resource.swift
 //  FH-Survival
 //
-//  Created by Benni on 10.06.16.
+//  Created by Benjamin Böcker on 29.06.16.
 //  Copyright © 2016 Ben Boecker. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-protocol Resource {
-	var data: NSData? { get }
+struct Resource<A> {
+	let url: NSURL
+	let parse: NSData -> A?
 }
 
+extension Resource {
+	init (url: NSURL, parseJSON: AnyObject -> A?) {
+		self.url = url
+		self.parse = { data in
+			let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
+			return json.flatMap(parseJSON)
+		}
+	}
+}

@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIView {
+extension UIView: Styled {
 	public override func awakeFromNib() {
 		super.awakeFromNib()
 

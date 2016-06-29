@@ -10,8 +10,8 @@ import UIKit
 
 class HintsViewController: UITableViewController, ContentViewController {
 
-	var hints: [Hint] {
-		return self.content.getAllHints()
+	var hints: [Information] {
+		return self.content.getInformation([.Hint, .Book])
 	}
 	
 	override func viewDidLoad() {

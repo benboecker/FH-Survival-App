@@ -20,6 +20,7 @@ class ImageTableViewCell: UITableViewCell {
 
 		self.tintedImageView.tintColor = ColorScheme.Primary
 		self.label.textColor = ColorScheme.DarkText
+		self.label.font = UIFont(textStyle: .Body)
 	}
 
 	func setTintedImage(image: UIImage) {

@@ -22,7 +22,7 @@ extension ContentViewController where Self: UITableViewController {
 	func loadContent() {
 		self.content.loadContent { (result) in
 			switch result {
-			case .Success(_):
+			case .Success(_):				
 				self.tableView.reloadData()
 			case let .Failure(error):
 				self.showAlertViewWithError(error)
