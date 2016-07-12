@@ -11,35 +11,38 @@ import Foundation
 enum URLType {
 	case Web
 	case Mail
+	case Phone
 }
 
 struct URL {
 	let title: String
 	let url: NSURL
+	let type: URLType
 
-	var type: URLType {
-		return self.determineURLType()
-	}
-	
+//	var type: URLType {
+//		return self.determineURLType()
+//	}
+}
+
+extension URL {
 	init? (json: [String: AnyObject]) {
 		guard let url = NSURL(string: json["url"] as? String ?? " ") else { return nil }
 		
 		self.title = json["title"] as? String ?? ""
 		self.url = url
+
+		self.type = URL.determineURLType(self.url)
 	}
 
-	private func determineURLType() -> URLType {
-		if (self.isMailAdress(self.url.absoluteString)) {
+	private static func determineURLType(url: NSURL) -> URLType {
+		if (url.absoluteString.isMailAdress) {
 			return .Mail
+		} else if (url.scheme == "tel") {
+			return .Phone
 		}
 
 		return .Web
 	}
 
-	private func isMailAdress(mail: String) -> Bool {
-		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-		let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-		return emailTest.evaluateWithObject(mail)
-	}
 }
 

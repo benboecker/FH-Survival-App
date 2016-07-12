@@ -23,7 +23,7 @@ extension Tag: CustomStringConvertible {
 		switch self {
 		case .FirstSteps: return "Erste Schritte"
 		case .Contact: return "Wo ist was?"
-		case .Hint: return "Tipp"
+		case .Hint: return "Tipps"
 		case .General: return "Allgemein"
 		case .Organisation: return "Organisation"
 		case .News: return "Neuigkeiten"

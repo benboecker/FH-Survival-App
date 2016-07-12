@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Resource<A> {
+struct Resource<ResourceType> {
 	let url: NSURL
-	let parse: NSData -> A?
+	let parse: NSData -> ResourceType?
 }
 
 extension Resource {
-	init (url: NSURL, parseJSON: AnyObject -> A?) {
+	init (url: NSURL, parseJSON: AnyObject -> ResourceType?) {
 		self.url = url
 		self.parse = { data in
 			let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])

@@ -15,7 +15,6 @@ struct Information {
 	let date: NSDate
 
 	let location: String
-	let phone: String
 
 	let tags: [Tag]
 	let urls: [URL]
@@ -30,12 +29,11 @@ extension Information {
 
 extension Information {
 	init? (json: [String: AnyObject]) {
-		guard let id = json["text"] as? Int else { return nil }
+		guard let id = json["id"] as? Int else { return nil }
 		
 		self.id = id
 		self.title = json["title"] as? String ?? ""
 		self.location = json["location"] as? String ?? ""
-		self.phone = json["phone"] as? String ?? ""
 		self.text = json["text"] as? String ?? ""
 
 		if let jsonTags = json["tags"] as? [String] {
@@ -44,11 +42,15 @@ extension Information {
 			self.tags = []
 		}
 
+		var urls: [URL] = []
 		if let jsonURLs = json["urls"] as? [[String: AnyObject]] {
-			self.urls = jsonURLs.flatMap(URL.init)
-		} else {
-			self.urls = []
+			urls = jsonURLs.flatMap(URL.init)
 		}
+		if let phone = json["phone"] as? String, phoneURL = NSURL(string: phone) where phone != "" {
+			let url = URL(title: "phone", url: phoneURL, type: .Phone)
+			urls.append(url)
+		}
+		self.urls = urls
 
 		if let dateString = json["date"] as? String,
 			let date = NSDate(string: dateString, format: "yyyy-MM-dd") {			

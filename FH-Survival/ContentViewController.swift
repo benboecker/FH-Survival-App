@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ContentViewController: ErrorViewController {
+protocol ContentViewController: ErrorViewController, Loading {
 	var content: Content { get }
 }
 
@@ -20,12 +20,16 @@ extension ContentViewController {
 
 extension ContentViewController where Self: UITableViewController {
 	func loadContent() {
-		self.content.loadContent { (result) in
+		self.showLoadingViewController()
+
+		self.content.loadContent { [weak self] result in
+			self?.hideLoadingViewController()
+
 			switch result {
 			case .Success(_):				
-				self.tableView.reloadData()
+				self?.tableView?.reloadData()
 			case let .Failure(error):
-				self.showAlertViewWithError(error)
+				self?.showAlertViewWithError(error)
 				break
 			}
 		}

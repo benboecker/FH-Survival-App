@@ -47,8 +47,6 @@ enum UIFontTextStyle: CustomStringConvertible {
 }
 
 extension UIFont {
-
-
 	convenience init(textStyle: UIFontTextStyle = .Body) {
 		let fontDescriptor = UIFontDescriptor.preferredFontDescriptorWithTextStyle("\(textStyle)")
 		self.init(descriptor: fontDescriptor, size: fontDescriptor.pointSize)

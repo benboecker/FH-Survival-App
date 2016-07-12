@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+/**
+
+**/
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,7 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		let tabBarController = UITabBarController()
 
-
+		tabBarController.viewControllers = [
+			ViewControllerProvider.introductionNavigationController,
+			ViewControllerProvider.organisationNavigationController,
+			ViewControllerProvider.searchNavigationController,
+			ViewControllerProvider.hintsNavigationController,
+			ViewControllerProvider.contactsNavigationController
+		]
 
 		self.window?.rootViewController = tabBarController
 		self.window?.makeKeyAndVisible()

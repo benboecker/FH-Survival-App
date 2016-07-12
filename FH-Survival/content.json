@@ -1,50 +1,22 @@
 {
-	"tags": [
-			 {
-			 "id": 1,
-			 "tag": "Tipp"
-			 },
-			 {
-			 "id": 2,
-			 "tag": "Wo ist was?"
-			 },
-			 {
-			 "id": 3,
-			 "tag": "Erste Schritte"
-			 },
-			 {
-			 "id": 4,
-			 "tag": "Organisation"
-			 },
-			 {
-			 "id": 5,
-			 "tag": "Allgemein"
-			 },
-			 {
-			 "id": 6,
-			 "tag": "Neuigkeiten"
-			 },
-			 {
-			 "id": 7,
-			 "tag": "Buchtipp"
-			 }
-			 ],
 	"information": [
 					{
+					"id": 1,
 					"title": "Zu Ihrer Grundhaltung",
 					"text": "An der Hochschule zu studieren bedeutet unter anderem: Ich bin selbst verantwortlich. Mit anderen Worten: Sich informieren, Organisieren und Motivieren sind drei wesentliche Aufgaben. Wichtig ist deshalb herauszu finden, was nötig ist und was man mit Blick auf das Studium will.",
 					"date": "2016-06-10",
 					"tags": [
-							 1, 5, 6
+							 "Tipp", "Allgemein", "Neuigkeiten"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Die Erstsemester-Infos",
 					"text": "Erstsemester-Infos sind das A und O. Sie bekommen sie in der Einführungswoche, die von den TutorInnen unseres Fachbereichs für Sie organisiert wird. Sie sollten sie auf keinen Fall verpassen! Sie beginnt jeweils eine Woche vor dem Start der Seminare. Das Programm finden Sie etwa Ende August bzw. Ende Februar online unter www.fh-bielefeld.de/fb4 in der rechten Spalte.",
 					"date": "2016-06-10",
 					"tags": [
-							 3
+							 "Erste Schritte"
 							 ],
 					"urls": [
 							 {
@@ -54,20 +26,22 @@
 							 ]
 					},
 					{
+					"id": 1,
 					"title": "Der Studienführer",
 					"text": "Der Studienführer erscheint online ca. vier bis sechs Wochen vor Beginn der Vorlesungszeit. Mit ihm verschaffen Sie sich einen Überblick über das gesamte Lehrangebot mit Beschreibungen der Lehrinhalte, der Teilnahmevoraussetzungen und Literaturempfehlungen.",
 					"date": "2016-06-10",
 					"tags": [
-							 3, 5
+							 "Erste Schritte", "Allgemein"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Praktika",
 					"text": "Weitere wichtige Informationen rund um das Studium sowie rund um die Praktika und das Berufspraktische Jahr finden Sie auf unserer Homepage unter Studierende sowie unter Praxisportal und über das fboard4. Letzteres ist die Mailingliste des Fachbereichs, unsere zentrale Informations- und Kommunikationsplattform für alle. Sie können sich per Mail (karsten.fortmann@fh-bielefeld.de) oder online über www.fh-bielefeld.de/fb4/ikm anmelden.",
 					"date": "2016-06-10",
 					"tags": [
-							 1, 4, 6
+							 "Tipp", "Organisation", "Neuigkeiten"
 							 ],
 					"urls": [
 							 {
@@ -81,20 +55,22 @@
 							 ]
 					},
 					{
+					"id": 1,
 					"title": "Bibliotheksausweis",
 					"text": "Den Bibliotheksausweis erhalten Sie in unserer Fachbibliothek im 3. Stock, Gebäude C. Dort können Sie auch Kopierkarten käuflich erwerben. Den Benutzerausweis für die Unibibliothek bekommen Sie in der Uni im Gebäudeteil A1.",
 					"date": "2016-06-10",
 					"tags": [
-							 1, 5
+							 "Tipp", "Allgemein"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Zugang zum PC-Hochschulnetz",
 					"text": "Den Zugang zum PC-Hochschulnetz erreichen Sie über Ihren Benutzernamen und Ihr Passwort, beides finden Sie auf Ihrer Semesterbescheinigung. Damit können Sie die PCs am Fachbereich, das WLAN für Ihr Notebook, die ILIAS-Plattform u.v.m. nutzen. Zudem haben Sie eine eigene Email-Adresse erhalten nach dem Muster: vorname.nachname@fh-bielefeld.de. Wenn Sie Ihr Passwort ändern möchten, können Sie dies unter „Benutzerverwaltung“ vornehmen. Ihre Emails können Sie über „Webmail“ abrufen. Beides siehe www.fh-bielefeld.de/service.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 3, 5, 6
+							 "Tipp", "Erste Schritte", "Allgemein", "Neuigkeiten"
 							 ],
 					"urls": [
 							 {
@@ -104,101 +80,112 @@
 							 ]
 					},
 					{
+					"id": 1,
 					"title": "Der Stundenplan",
 					"text": "In der Einführungswoche erfahren Sie, wie Sie Ihren Stundenplan zusammenstellen können. Das heißt, es gibt keinen vorgegebenen Stundenplan, sondern Sie gestalten ihn in jedem Semester neu. Hilfreich ist hierbei, wenn Sie die Prüfungsordnung mit Modulhandbuch und Studienverlaufsplan des gewählten Studiengangs kennen, sie steht online unter „Studium“. Hier erfahren Sie, wie viele Semesterwochenstunden (SWS) Sie für die Anmeldung zur Modulprüfung mindestens nachweisen müssen, welche Prüfungsformen vorgesehen sind und welche Prüfungen Sie geschafft haben müssen, um sich für die nächste anmelden zu können. Achten Sie im Studienführer bitte auch auf den Unterschied zwischen frei wählbaren (Wp.) und obligatorischen Pflichtseminaren (P.).",
 					"date": "2016-06-14",
 					"tags": [
-							 3, 4, 6
+							 "Erste Schritte", "Organisation", "Neuigkeiten"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Studienverlaufsplan",
 					"text": "Der von uns vorgeschlagene Studienverlaufsplan bietet eine Orientierung bei der Organisation Ihres Studiums, er ist nicht verbindlich.",
 					"date": "2016-06-14",
 					"tags": [
-							 4, 5
+							 "Organisation", "Allgemein"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Anmeldungen zu Seminaren",
 					"text": "Bei einigen Seminaren sind Anmeldungen notwendig. Achten Sie bitte daher immer auf die Angaben in den Studienführern und auf die Infos über fboard4.",
 					"date": "2016-06-14",
 					"tags": [
-							 3, 4, 5
+							 "Erste Schritte", "Organisation", "Allgemein"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Zeitplanung",
 					"text": "Zeit ist schnell verplant oder vergeudet. Wenn Sie zum Beispiel Ihren Semester-Stundenplan zusammenstellen, sollten Sie für jedes Seminar mindestens noch einmal dieselbe Zeit für Lektüre, Vor- und Nachbereitung einkalkulieren. In der Regel wird der Lernstoff nicht wiederholt, sondern die Seminarstunden bauen aufeinander auf und setzen das Wissen der vorherigen Sitzung voraus. Im Modulkatalog finden Sie die Zeitangaben für das Präsenzstudium sowie für das Selbststudium je nach Modul näher ausdifferenziert.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 4
+							 "Tipp", "Organisation"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Arbeitsrhytmus",
 					"text": "Ein regelmäßiger Arbeitsrhythmus ist empfehlenswert um das Studium zu bewältigen. Er hilft dabei, sich auf die Geschwindigkeit und Flexibilität des Lernens sowie auf das Niveau der Anforderungen umzustellen. Setzen Sie sich realistische Lernziele und Zeitpläne.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 4
+							 "Tipp", "Organisation"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Organisation von Notizen",
 					"text": "Versuchen Sie, Ihre Notizen so zu verfassen, dass Sie sie auch noch nach drei Semestern verstehen und verwenden können, z.B. zur Vorbereitung auf eine Modulprüfung. Dabei ist es egal, ob Sie gleich alles ins Notebook tippen oder auf Karteikarten oder Notizzetteln notieren - Hauptsache, SIE kommen mit dem gewählten Verfahren für Mitschriften gut zu Recht.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 4
+							 "Tipp", "Organisation"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Organisation von Materialien",
 					"text": "Dasselbe gilt für Kopien und andere Materialien, die Sie im Seminar erhalten. Entwickeln Sie sich ein nachvollziehbares Ablagesystem für Papier und Dateien.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 4
+							 "Tipp", "Organisation"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Ordnung",
 					"text": "Apropos Ordnung: In einem Ordner sollten Sie alles Wichtige wie Modulhandbuch, Prüfungsordnung, Ordnung zur Staatlichen Anerkennung, Semesterbescheinigungen, Seminar- und Prüfungsbescheinigungen, Rückmeldebogen, BAFöG-Unterlagen und Versicherungen abheften.",
 					"date": "2016-06-14",
 					"tags": [
-							 4, 5
+							 "Organisation", "Allgemein"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Lerngruppen",
 					"text": "Suchen Sie sich eine nette Lerngruppe aus. Das ist die beste Methode gegen den inneren Schweinehund: Es hilft, sich selbst zu motivieren und zu organisieren. Und es schult Ihre Team-, Kommunikations- und Konfliktfähigkeit — Schlüsselkompetenzen für alle sozialen und pädagogischen Arbeitsfelder.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 3, 6
+							 "Tipp", "Erste Schritte", "Neuigkeiten"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Termine",
 					"text": "Wichtig sind die Termine für Prüfungsanmeldungen, für Prüfungen, für die Abgabe von Arbeiten, Öffnungszeiten von Prüfungsamt, Bibliothek, IKM, Sprechzeiten des Praxisreferats, Sprechzeiten der Lehrenden, für BAFöG-Anträge - und vor allem die Rückmeldetermine. Sie finden alle Termine online, als Aushänge und in Informationsmaterialien. Aktuelle Terminänderungen erfahren Sie über fboard4.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 3, 5
+							 "Tipp", "Erste Schritte", "Allgemein"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Studienbeiträge",
 					"text": "Damit Sie überhaupt und jedes Semester weiter studieren können, müssen Sie über das Studierendensekretariat eingeschrieben sein. Sie dürfen also nie vergessen sich rückzumelden, und dabei den Studienbeitrag PÜNKTLICH zu bezahlen. Wie und bis wann das jeweils geht, finden Sie online unter www.fh-bielefeld.de - Studium - Studierendensekretariat.",
 					"date": "2016-06-14",
 					"tags": [
-							 4, 5
+							 "Organisation", "Allgemein"
 							 ],
 					"urls": [
 							 {
@@ -208,11 +195,12 @@
 							 ]
 					},
 					{
+					"id": 1,
 					"title": "BAföG",
 					"text": "Ob und wie hoch eine Förderung nach dem BAföG für Sie wäre, können Sie sich online ausrechnen (www.bafoeg-rechner.de). Information und Beratung in allen Fragen der Studienfinanzierung bieten die ZSB der FH, Marion Abend, Raum 028, Gebäude D, fon: 0521.106-7768 sowie der ASTA mit seiner Sozial- und BAföG-Beratung, siehe www.fh-asta.de. Das BAföG-Amt ist im Hauptgebäude der Uni Bielefeld, Universitätsstraße 25, Bauteil C2 zu finden. Siehe auch www.bafoeg@studentenwerk-bielefeld.de",
 					"date": "2016-06-14",
 					"tags": [
-							 4, 5
+							 "Organisation", "Allgemein"
 							 ],
 					"urls": [
 							 {
@@ -230,69 +218,74 @@
 							 ]
 					},
 					{
+					"id": 1,
 					"title": "Wenn ich weitere Fragen habe...",
 					"text": "...können Sie sich gerne an die TutorInnen in Raum 140 wenden oder an die Studienfachberaterin Christiane Möcker, Raum 214",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 5
+							 "Tipp", "Allgemein"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Buchtipps",
 					"text": "Und zu guter Letzt: Lesen Lesen Lesen. Auch wenn Sommerpause ist oder Weihnachtszeit, es empfiehlt sich, regelmäßig Fachliteratur und Fachzeitschriften (z.B. aus der Fachbibliothek) zu lesen. Auch Abos informativer Tages- oder Wochenzeitungen sind zu empfehlen — und kostengünstig für Studierende z.B. über studentenpresse.com zu bestellen.",
 					"date": "2016-06-14",
 					"tags": [
-							 1, 7
+							 "Tipp", "Buchtipp"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Buchtipp",
 					"text": "Arbeitshilfen zur Anfertigung wissenschaftlicher Haus- und Abschlussarbeiten sowie zur Anfertigung von Praxisberichten online unter Studienfachberatung.",
 					"date": "2016-06-14",
 					"tags": [
-							 7, 6
+							 "Buchtipp", "Neuigkeiten"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Buchtipp",
 					"text": "Heister, Werner (2009): Studieren mit Erfolg: Effizientes Lernen und Selbstmanagement in Bachelor-, Master- und Diplomstudiengängen. 2. Auflg., Stuttgart: Schäffer-Poeschel.",
 					"date": "2016-06-14",
 					"tags": [
-							 7
+							 "Buchtipp"
 							 ],
 					"urls": []
 					},
 					{
+					"id": 1,
 					"title": "Buchtipp",
 					"text": "Krengel, Martin (2008): Der Studi-Survival-Guide. 2. Auflg., Berlin: Uni-Edition.",
 					"date": "2016-06-14",
 					"tags": [
-							 7
+							 "Buchtipp"
 							 ],
 					"urls": []
-					}
-					],
-	"contacts": [
+					},
 				 {
+					"id": 1,
 				 "title": "Anschrift Fachhochschule Bielefeld - Fachbereich Sozialwesen",
 				 "location": "Gebäude C, Kurt-Schumacher-Straße 6, 33615 Bielefeld",
 				 "phone": "",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": []
 				 },{
+					"id": 1,
 				 "title": "Einschreibebüro / Studierendensekretariat",
 				 "text": "",
 				 "location": "Gebäude D, Erdgeschoss, Raum 9",
 				 "phone": "05211067707",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -301,13 +294,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Fachschaftsrat (FSR)",
 				 "text": "",
 				 "location": "Gebäude C, 1. Etage, Raum 145",
 				 "phone": "05211067850",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -316,13 +310,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "ASTA",
 				 "text": "",
 				 "location": "Gebäude D, Erdgeschoss, Raum 11",
 				 "phone": "05211067724",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -335,13 +330,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Prüfungsamt",
 				 "text": "",
 				 "location": "Gebäude C, 2. Etage, Raum 212",
 				 "phone": "05211067881",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -350,13 +346,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Praxisreferat",
 				 "text": "",
 				 "location": "Gebäude C, 2. Etage, Raum 216/214",
 				 "phone": "05211067832",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -365,13 +362,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Sekretariat, FB Sozialwesen",
 				 "text": "",
 				 "location": "Gebäude C, 2. Etage, Raum 218",
 				 "phone": "05211067834",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -380,13 +378,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Tutorenteam FB Sozialwesen",
 				 "text": "",
 				 "location": "Gebäude C, 1.Etage, Raum 140",
 				 "phone": "05211067824",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -395,13 +394,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Studienfachberatung",
 				 "text": "",
 				 "location": "Gebäude C, 2. Etage, Raum 214",
 				 "phone": "05211067832",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -410,13 +410,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Fachbibliothek",
 				 "text": "",
 				 "location": "Gebäude C, 3. Etage",
 				 "phone": "05211067856",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -425,13 +426,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "IKM",
 				 "text": "",
 				 "location": "Gebäude C, 2. Etage, Raum 207",
 				 "phone": "05211067830",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -440,13 +442,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "ILIAS",
 				 "text": "",
 				 "location": "Gebäude C, 2. Etage, Raum 249",
 				 "phone": "05217845",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
@@ -455,13 +458,14 @@
 						  }
 						  ]
 				 },{
+					"id": 1,
 				 "title": "Amt für Ausbildungsförderung",
 				 "text": "",
 				 "location": "Universität, Gebäudeteil C, Räume 2-200",
 				 "phone": "05211063581",
 				 "date": "2016-06-10",
 				 "tags": [
-						  2
+						  "Wo ist was?"
 						  ],
 				 "urls": [
 						  {
