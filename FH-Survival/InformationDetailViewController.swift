@@ -29,12 +29,8 @@ class InformationDetailViewController: UITableViewController {
 		self.tableView.estimatedRowHeight = 44
 		self.tableView.rowHeight = UITableViewAutomaticDimension
 
-		let contentTableViewCell = UINib(nibName: "ContentTableViewCell", bundle: nil)
-		let imageTableViewCell = UINib(nibName: "ImageTableViewCell", bundle: nil)
-
-		self.tableView.registerNib(contentTableViewCell, forCellReuseIdentifier: "contentCell")
-		self.tableView.registerNib(imageTableViewCell, forCellReuseIdentifier: "imageCell")
-
+		self.tableView.registerReuseableCell(ContentTableViewCell.self)
+		self.tableView.registerReuseableCell(ImageTableViewCell.self)
 	}
 
     // MARK: - Table view data source
@@ -63,17 +59,12 @@ class InformationDetailViewController: UITableViewController {
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		switch indexPath.section {
 		case 0:
-			guard let cell = tableView.dequeueReusableCellWithIdentifier("contentCell", forIndexPath: indexPath) as? ContentTableViewCell else {
-				return UITableViewCell()
-			}
-
+			let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as ContentTableViewCell
 			cell.configureWithInformation(self.information)
 
 			return cell
 		case 1:
-			guard let cell = tableView.dequeueReusableCellWithIdentifier("imageCell", forIndexPath: indexPath) as? ImageTableViewCell else {
-				return UITableViewCell()
-			}
+			let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as ImageTableViewCell
 
 			let url = self.information.urls[indexPath.row]
 			cell.label.text = url.url.absoluteString
@@ -92,7 +83,6 @@ class InformationDetailViewController: UITableViewController {
 			return UITableViewCell()
 		}
 	}
-
 
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)

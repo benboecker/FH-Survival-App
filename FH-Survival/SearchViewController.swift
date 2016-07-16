@@ -32,8 +32,7 @@ class SearchViewController: UITableViewController, ContentViewController, UISear
 		self.tableView.estimatedRowHeight = 60
 		self.tableView.rowHeight = UITableViewAutomaticDimension
 
-		let nib = UINib(nibName: "HeadlineTableViewCell", bundle: nil)
-		self.tableView.registerNib(nib, forCellReuseIdentifier: "headlineCell")
+		self.tableView.registerReuseableCell(HeadlineTableViewCell.self)
 
 		self.loadContent()
 
@@ -49,11 +48,8 @@ class SearchViewController: UITableViewController, ContentViewController, UISear
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCellWithIdentifier("headlineCell", forIndexPath: indexPath) as? HeadlineTableViewCell
-			else { return UITableViewCell() }
-
+		let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as HeadlineTableViewCell
 		cell.configureWithInformation(self.searchResults[indexPath.row])
-
 		return cell
 	}
 

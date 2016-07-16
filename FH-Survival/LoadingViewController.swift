@@ -11,7 +11,7 @@ import UIKit
 class LoadingViewController : UIViewController {
 
 	/// Reference to the actual loading view, of type `LoadingView`
-	var loadingView: LoadingView?
+	private var loadingView: LoadingView?
 
 	/**
 	Override loadView to construct the loading view programmatically.
@@ -78,7 +78,7 @@ class LoadingViewController : UIViewController {
 		}
 	}
 
-	class LoadingView: UIView {
+	private class LoadingView: UIView {
 		private var activityIndicatorView: UIActivityIndicatorView?
 
 		override init(frame: CGRect) {

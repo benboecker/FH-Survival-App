@@ -18,10 +18,6 @@ struct URL {
 	let title: String
 	let url: NSURL
 	let type: URLType
-
-//	var type: URLType {
-//		return self.determineURLType()
-//	}
 }
 
 extension URL {

@@ -16,22 +16,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow? = UIWindow(frame: UIScreen.mainScreen().bounds)
-
+	var viewControllerFlow: ViewControllerFlow?
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-		let tabBarController = UITabBarController()
+		self.viewControllerFlow = ViewControllerFlow()
 
-		tabBarController.viewControllers = [
-			ViewControllerProvider.introductionNavigationController,
-			ViewControllerProvider.organisationNavigationController,
-			ViewControllerProvider.searchNavigationController,
-			ViewControllerProvider.hintsNavigationController,
-			ViewControllerProvider.contactsNavigationController
-		]
+		ColorScheme.setColorScheme(ColorScheme.ColorSchemeValue.Pink)
+		Appearance.setAppearance()
 
-		self.window?.rootViewController = tabBarController
+		self.window?.rootViewController = self.viewControllerFlow?.tabBarController
 		self.window?.makeKeyAndVisible()
+
+
 
 		return true
 	}

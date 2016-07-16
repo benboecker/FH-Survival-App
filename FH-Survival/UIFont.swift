@@ -8,18 +8,32 @@
 
 import UIKit
 
+/**
+This enum represents a text style used by UIFont.
+*/
 enum UIFontTextStyle: CustomStringConvertible {
+	/// The enum value for UIFontTextStyleTitle1
 	case Title1
+	/// The enum value for UIFontTextStyleTitle2
 	case Title2
+	/// The enum value for UIFontTextStyleTitle3
 	case Title3
+	/// The enum value for UIFontTextStyleHeadline
 	case Headline
+	/// The enum value for UIFontTextStyleSubheadline
 	case Subheadline
+	/// The enum value for UIFontTextStyleBody
 	case Body
+	/// The enum value for UIFontTextStyleFootnote
 	case Footnote
+	/// The enum value for UIFontTextStyleCaption1
 	case Caption1
+	/// The enum value for UIFontTextStyleCaption2
 	case Caption2
+	/// The enum value for UIFontTextStyleCallout
 	case Callout
 
+	/// The String representation of the enum value.
 	var description: String {
 		switch self {
 		case .Title1:
@@ -47,6 +61,14 @@ enum UIFontTextStyle: CustomStringConvertible {
 }
 
 extension UIFont {
+
+
+
+	/**
+	This initializer takes a `UIFontTextStyle` enum value and creates a `UIFont` in the correct style.
+
+	- Parameter textStyle: The text style that the new font object will represent..
+	*/
 	convenience init(textStyle: UIFontTextStyle = .Body) {
 		let fontDescriptor = UIFontDescriptor.preferredFontDescriptorWithTextStyle("\(textStyle)")
 		self.init(descriptor: fontDescriptor, size: fontDescriptor.pointSize)

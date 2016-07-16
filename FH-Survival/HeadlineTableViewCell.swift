@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeadlineTableViewCell: UITableViewCell {
+class HeadlineTableViewCell: UITableViewCell, Reuseable {
 	@IBOutlet weak var headlineLabel: UILabel!
 	@IBOutlet weak var bodyLabel: UILabel!
 

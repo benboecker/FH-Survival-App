@@ -16,17 +16,6 @@ enum SortOption {
 
 final class Content {
 	static let sharedInstance = Content()
-	private init() {
-
-		let resource = Information.all
-
-		if let filepath = NSBundle.mainBundle().pathForResource("content", ofType: "json") {
-			let localData = NSData(contentsOfFile: filepath)
-			if let result = localData.flatMap(resource.parse) {
-				self.information = result
-			}
-		}
-	}
 
 	private let webService: WebService = WebService()
 	private var information: [Information] = []
@@ -38,6 +27,20 @@ final class Content {
 	}
 
 	private var completionHandlers: [CompletionHandler] = []
+
+	private init() {
+
+		let resource = Information.all
+
+		self.information = LocalContentCoordinator.loadContent()
+
+		if let filepath = NSBundle.mainBundle().pathForResource("content", ofType: "json") {
+			let localData = NSData(contentsOfFile: filepath)
+			if let result = localData.flatMap(resource.parse) {
+				self.information = result
+			}
+		}
+	}
 }
 
 extension Content {
