@@ -16,7 +16,7 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
 		switch url.type {
 		case .Web:
 			let safariViewController = SFSafariViewController(URL: url.url)
-			safariViewController.view.tintColor = ColorScheme.Primary
+			safariViewController.view.tintColor = AppColor.primary
 			self.presentViewController(safariViewController, animated: true, completion: nil)
 		case .Mail:
 			let mailController = MFMailComposeViewController()

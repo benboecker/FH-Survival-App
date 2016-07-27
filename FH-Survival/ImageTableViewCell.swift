@@ -18,13 +18,13 @@ class ImageTableViewCell: UITableViewCell, Reuseable {
 			self.tintedImageView.image = image.imageWithRenderingMode(.AlwaysTemplate)
 		}
 
-		self.tintedImageView.tintColor = ColorScheme.Primary
-		self.label.textColor = ColorScheme.DarkText
+		self.tintedImageView.tintColor = AppColor.accent
+		self.label.textColor = AppColor.secondaryText
 		self.label.font = UIFont(textStyle: .Body)
 	}
 
 	func setTintedImage(image: UIImage) {
 		self.tintedImageView.image = image.imageWithRenderingMode(.AlwaysTemplate)
-		self.tintedImageView.tintColor = ColorScheme.Primary
+		self.tintedImageView.tintColor = AppColor.accent
 	}
 }

@@ -37,6 +37,9 @@ class InformationListViewController: UITableViewController, ContentViewControlle
 
 		self.tableView.registerReuseableCell(HeadlineTableViewCell.self) // This will register using the class without using a UINib
 
+		let bucketIcon = UIBarButtonItem(image: Asset.Icon.Bucket, style: .Plain, target: self, action: #selector(didTapBucket(_:)))
+		self.navigationItem.leftBarButtonItem = bucketIcon
+
 		self.loadContent()
 	}
 
@@ -45,7 +48,6 @@ class InformationListViewController: UITableViewController, ContentViewControlle
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
 		let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as HeadlineTableViewCell
 		cell.configureWithInformation(self.information[indexPath.row])
 
@@ -55,11 +57,17 @@ class InformationListViewController: UITableViewController, ContentViewControlle
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //		self.showInformationDetail(self.information[indexPath.row])
 
-		ColorScheme.setColorScheme(.Green)
-		Appearance.setAppearance()
+//		let detailViewController = InformationDetailViewController(information: self.information[indexPath.row])
+//		self.navigationController?.pushViewController(detailViewController, animated: true)
 
-		let detailViewController = InformationDetailViewController(information: self.information[indexPath.row])
+		let detailViewController = ImageGalleryViewController()
 		self.navigationController?.pushViewController(detailViewController, animated: true)
+	}
+
+	func didTapBucket(sender: UIBarButtonItem) {
+		let colorSchemeViewController = ColorSchemeViewController(collectionViewLayout: UICollectionViewFlowLayout())
+		let colorNavigationController = UINavigationController(rootViewController: colorSchemeViewController)
+		self.presentViewController(colorNavigationController, animated: true, completion: nil)
 	}
 }
 

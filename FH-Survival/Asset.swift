@@ -32,6 +32,10 @@ enum Asset {
 		static let Search = UIImage(named: "search")!
 		/// The web icon
 		static let Web = UIImage(named: "web")!
+		/// The bucket icon
+		static let Bucket = UIImage(named: "bucket")!
+		/// The QR code icon
+		static let QRCode = UIImage(named: "qrcode")!
 	}
 
 }

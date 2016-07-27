@@ -22,8 +22,8 @@ class HeadlineTableViewCell: UITableViewCell, Reuseable {
 	override func updateStyle() {
 		super.updateStyle()
 
-		self.headlineLabel?.textColor = ColorScheme.Primary
-		self.bodyLabel?.textColor = ColorScheme.DarkText
+		self.headlineLabel?.textColor = AppColor.accent
+		self.bodyLabel?.textColor = AppColor.secondaryText
 
 		self.headlineLabel?.font = UIFont(textStyle: .Title3)
 		self.bodyLabel?.font = UIFont(textStyle: .Body)

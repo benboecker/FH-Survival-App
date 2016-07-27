@@ -40,7 +40,7 @@ class SearchViewController: UITableViewController, ContentViewController, UISear
 
 	override func viewWillAppear(animated: Bool) {
 		self.searchController.searchBar.becomeFirstResponder()
-		self.searchController.searchBar.tintColor = ColorScheme.Primary
+		self.searchController.searchBar.tintColor = AppColor.primary
 	}
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

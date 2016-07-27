@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		self.viewControllerFlow = ViewControllerFlow()
 
-		ColorScheme.setColorScheme(ColorScheme.ColorSchemeValue.Pink)
+//		ColorScheme.setColorScheme(ColorScheme.ColorSchemeValue.Pink)
 		Appearance.setAppearance()
 
 		self.window?.rootViewController = self.viewControllerFlow?.tabBarController

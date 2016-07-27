@@ -25,6 +25,16 @@ Die Daten des FH-Flyers werden durch zwei Strukturen, eine Enumeration und eine 
 
 ### Anpassen des Erscheinungsbildes
 
+#### Farbschemata
+
+- Hauptfarbe
+- Sekundärfarbe
+- Akzentfarbe
+- Text Hell
+- Text Mittel
+- Text Dunkel
+- HintergrundUIColor.blackColor()
+
 ### TableViewCells
 
 Für die App gibt es drei verschiedene Typen von UITableView Subklassen: `HeadlineTableViewCell`, `ImageTableViewCell` und `ContentTableViewCell`. Die einzelnen *TableViewCells* sind zusätzlich über Interface-Builder-Dateien definiert, in welchen das Layout der beinhalteten GUI-Elemente festgelegt ist. Das Aussehen der einzelnen Cells wird allerdings in den Klassen definiert, durch Überschreiben der Protokollmethode `updateStyles()`. Da jede *TableViewCell* ein *UIView* ist, implementiert auch jede der Unterklassen das Protokoll `Styled`.

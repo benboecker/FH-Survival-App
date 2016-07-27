@@ -21,20 +21,6 @@ internal extension UITableView {
 	}
 }
 
-protocol Reuseable: class {
-	static var reuseIdentifier: String { get }
-	static var nib: UINib? { get }
-}
-
-extension Reuseable {
-	static var reuseIdentifier: String {
-		return String(Self)
-	}
-	static var nib: UINib? {
-		return UINib(nibName: String(Self), bundle: nil)
-	}
-}
-
 
 
 

@@ -8,40 +8,54 @@
 
 import Foundation
 
-enum HexCodes {
-	enum Pink {
-		static let LightText = 0x545454
-		static let DarkText = 0x1A1A1A
-		static let Primary = 0xFF0080
-		static let Secondary = 0x810041		
-	}
-
-	enum Yellow {
-		static let LightText = 0x545454
-		static let DarkText = 0x1A1A1A
+enum ColorHexCodes {
+	enum Strawberry {
 		static let Primary = 0xFF0080
 		static let Secondary = 0x810041
+		static let Accent = 0xFF0080
+		static let PrimaryText = 0x1A1A1A
+		static let SecondaryText = 0x444444
+		static let HintText = 0xAAAAAA
+		static let Background = 0xFAFAFA
 	}
 
-	enum Green {
-		static let LightText = 0x545454
-		static let DarkText = 0x1A1A1A
-		static let Primary = 0x6bd304
-		static let Secondary = 0x408000
+	enum Citrus {
+		static let Primary = 0xFFFF80
+		static let Secondary = 0x810041
+		static let Accent = 0xFF0080
+		static let PrimaryText = 0x1A1A1A
+		static let SecondaryText = 0x444444
+		static let HintText = 0xAAAAAA
+		static let Background = 0xFAFAFA
 	}
 
-	enum Blue {
-		static let LightText = 0x545454
-		static let DarkText = 0x1A1A1A
-		static let Primary = 0x0080FF
-		static let Secondary = 0x367da2
+	enum Lime {
+		static let Primary = 0x00FF00
+		static let Secondary = 0x810041
+		static let Accent = 0xFF0080
+		static let PrimaryText = 0x1A1A1A
+		static let SecondaryText = 0x444444
+		static let HintText = 0xAAAAAA
+		static let Background = 0xFFFFFF
 	}
 
-	enum Red {
-		static let LightText = 0x545454
-		static let DarkText = 0x1A1A1A
-		static let Primary = 0xca0002
-		static let Secondary = 0x800000
+	enum Blueberry {
+		static let Primary = 0x0000FF
+		static let Secondary = 0x810041
+		static let Accent = 0xFF0080
+		static let PrimaryText = 0x1A1A1A
+		static let SecondaryText = 0x444444
+		static let HintText = 0xAAAAAA
+		static let Background = 0xFFFFFF
 	}
 
+	enum Cherry {
+		static let Primary = 0xFF0000
+		static let Secondary = 0x810041
+		static let Accent = 0xFF0080
+		static let PrimaryText = 0x1A1A1A
+		static let SecondaryText = 0x444444
+		static let HintText = 0xAAAAAA
+		static let Background = 0xFFFFFF
+	}
 }

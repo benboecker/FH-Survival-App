@@ -17,6 +17,6 @@ extension UIView: Styled {
 	}
 
 	func updateStyle() {
-		self.tintColor = ColorScheme.Primary
+		self.tintColor = AppColor.primary
 	}
 }

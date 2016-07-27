@@ -23,9 +23,9 @@ class ContentTableViewCell: UITableViewCell, Reuseable {
 	override func updateStyle() {
 		super.updateStyle()
 
-		self.headlineLabel.textColor = ColorScheme.Primary
-		self.subheadlineLabel.textColor = ColorScheme.LightText
-		self.contentLabel.textColor = ColorScheme.DarkText
+		self.headlineLabel.textColor = AppColor.accent
+		self.subheadlineLabel.textColor = AppColor.secondaryText
+		self.contentLabel.textColor = AppColor.primaryText
 
 		self.headlineLabel.font = UIFont(textStyle: .Title1)
 		self.subheadlineLabel.font = UIFont(textStyle: .Subheadline)

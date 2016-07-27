@@ -11,15 +11,15 @@ import UIKit
 enum Appearance {
 
 	static func setAppearance() {
-		UITabBar.appearance().tintColor = ColorScheme.Primary
+		UITabBar.appearance().tintColor = AppColor.primary
 
-		UINavigationBar.appearance().barTintColor = ColorScheme.Primary
-		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-		UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
-		UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+		UINavigationBar.appearance().barTintColor = AppColor.primary
+		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:AppColor.white]
+		UIBarButtonItem.appearance().tintColor = AppColor.white
+		UINavigationBar.appearance().tintColor = AppColor.white
 
-		UIToolbar.appearance().barTintColor = ColorScheme.Primary
-		UIToolbar.appearance().tintColor = ColorScheme.Secondary
+		UIToolbar.appearance().barTintColor = AppColor.primary
+		UIToolbar.appearance().tintColor = AppColor.primary
 
 		UINavigationBar.appearance().barStyle = .Black
 	}
