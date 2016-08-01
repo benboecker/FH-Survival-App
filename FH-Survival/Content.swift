@@ -31,13 +31,16 @@ final class Content {
 	private init() {
 
 		let resource = Information.all
+		let localContentCoordinator = LocalContentCoordinator()
 
-		self.information = LocalContentCoordinator.loadContent()
-
-		if let filepath = NSBundle.mainBundle().pathForResource("content", ofType: "json") {
-			let localData = NSData(contentsOfFile: filepath)
-			if let result = localData.flatMap(resource.parse) {
-				self.information = result
+		if localContentCoordinator.localContentAvailable {
+			self.information = localContentCoordinator.loadContent()
+		} else {
+			if let filepath = Asset.File.DefaultContent {
+				let localData = NSData(contentsOfFile: filepath)
+				if let result = localData.flatMap(resource.parse) {
+					self.information = result
+				}
 			}
 		}
 	}

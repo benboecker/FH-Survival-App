@@ -38,4 +38,26 @@ enum Asset {
 		static let QRCode = UIImage(named: "qrcode")!
 	}
 
+	/**
+	Inner enum to access filepaths
+	*/
+	enum File {
+		// The filepath to the default content json file.
+		static let DefaultContent = NSBundle.mainBundle().pathForResource("content", ofType: "json")
+
+		static var LocalContent: String {
+			guard let documentsDirectory = UIApplication.sharedApplication().documentsDirectory else {
+				return ""
+			}
+
+			return "\(documentsDirectory)/content.json"
+		}
+	}
 }
+
+
+
+
+
+
+

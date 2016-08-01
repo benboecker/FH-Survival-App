@@ -66,11 +66,21 @@ class InformationListViewController: UITableViewController, ContentViewControlle
 
 	func didTapBucket(sender: UIBarButtonItem) {
 		let colorSchemeViewController = ColorSchemeViewController(collectionViewLayout: UICollectionViewFlowLayout())
+		colorSchemeViewController.delegate = self
 		let colorNavigationController = UINavigationController(rootViewController: colorSchemeViewController)
 		self.presentViewController(colorNavigationController, animated: true, completion: nil)
 	}
 }
 
+extension InformationListViewController: ColorSchemeSelectionDelegate {
+	func didPressCancel() {
+		self.dismissViewControllerAnimated(true, completion: nil)
+	}
 
+	func selectedColorScheme(colorScheme: ColorScheme) {
+		self.dismissViewControllerAnimated(true, completion: nil)
+		self.tableView.reloadData()
+	}
+}
 
 

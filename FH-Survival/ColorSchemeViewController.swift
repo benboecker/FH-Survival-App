@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol ColorSchemeSelectionDelegate: class{
+	func didPressCancel()
+	func selectedColorScheme(colorScheme: ColorScheme)
+}
+
 class ColorSchemeViewController: UICollectionViewController {
+
+	var delegate: ColorSchemeSelectionDelegate?
 
 	var items: [ColorScheme] {
 		return ColorScheme.all
@@ -26,6 +33,16 @@ class ColorSchemeViewController: UICollectionViewController {
 			layout.minimumLineSpacing = 20
 			layout.minimumInteritemSpacing = 20
 		}
+
+		let cancelButton = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(cancelButtonTapped(_:)))
+		self.navigationItem.leftBarButtonItem = cancelButton
+	}
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+
+		let selectedIndexPath = NSIndexPath(forItem: 0, inSection: 0)
+		self.collectionView?.selectItemAtIndexPath(selectedIndexPath, animated: false, scrollPosition: .CenteredVertically)
 	}
 
 	override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,6 +57,8 @@ class ColorSchemeViewController: UICollectionViewController {
 
 	override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
 		AppColor.setSelectedColorScheme(self.items[indexPath.row])
+
+		self.delegate?.selectedColorScheme(self.items[indexPath.row])
 	}
 
 	func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -48,4 +67,12 @@ class ColorSchemeViewController: UICollectionViewController {
 
 		return CGSize(width: width, height: height)
 	}
+
+	func cancelButtonTapped(sender: AnyObject) {
+		self.delegate?.didPressCancel()
+	}
 }
+
+
+
+

@@ -62,8 +62,6 @@ enum UIFontTextStyle: CustomStringConvertible {
 
 extension UIFont {
 
-
-
 	/**
 	This initializer takes a `UIFontTextStyle` enum value and creates a `UIFont` in the correct style.
 

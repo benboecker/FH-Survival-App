@@ -53,6 +53,7 @@ final class AppColor {
 
 	static func setSelectedColorScheme(colorScheme: ColorScheme) {
 		AppColor.shared.selectedColorScheme = colorScheme
+		Appearance.setAppearance()
 	}
 }
 

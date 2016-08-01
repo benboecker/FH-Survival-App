@@ -21,9 +21,9 @@ class ColorSelectionCollectionViewCell: UICollectionViewCell, Reuseable {
 		super.awakeFromNib()
 		self.backgroundView = nil
 
-		let selectedView = UIView(frame: self.bounds)
-		selectedView.backgroundColor = UIColor(white: 0.5, alpha: 1)
-		self.selectedBackgroundView = selectedView
+//		let selectedView = UIView(frame: self.bounds)
+//		selectedView.backgroundColor = UIColor.redColor()
+//		self.selectedBackgroundView = selectedView
 	}
 
 	func configureCell(colorScheme: ColorScheme) {
@@ -33,6 +33,9 @@ class ColorSelectionCollectionViewCell: UICollectionViewCell, Reuseable {
 		self.accentColorView.backgroundColor = colorScheme.accent
 		self.primaryTextColorView.backgroundColor = colorScheme.primaryText
 		self.secondaryTextColorView.backgroundColor = colorScheme.secondaryText
+
+
+		self.contentView.backgroundColor = self.selected ? UIColor.greenColor() : UIColor.redColor()
 	}
 
 	override func updateStyle() {
@@ -45,7 +48,6 @@ class ColorSelectionCollectionViewCell: UICollectionViewCell, Reuseable {
 		self.contentView.layer.cornerRadius = 10.0
 		self.contentView.layer.borderColor = UIColor(white: 0.7, alpha: 1.0).CGColor
 		self.contentView.layer.borderWidth = 1.0
-		self.contentView.backgroundColor = self.selected ? UIColor(white: 0.85, alpha: 1) : UIColor(white: 1, alpha: 1)
 
 		self.backgroundColor = UIColor.clearColor()
 	}

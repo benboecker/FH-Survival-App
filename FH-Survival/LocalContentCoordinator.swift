@@ -6,21 +6,31 @@
 //  Copyright © 2016 Ben Boecker. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-enum LocalContentCoordinator {
-
-	static var localContentAvailable: Bool {
-		return true
+struct LocalContentCoordinator {
+	var localContentAvailable: Bool {
+		let fileManager = NSFileManager()
+		return fileManager.fileExistsAtPath(Asset.File.LocalContent)
 	}
 
-	static func saveContent(contentData: [Information]) {
+	func saveContent(information: [Information]) {
 
 	}
 
-	static func loadContent() -> [Information] {
+	func loadContent() -> [Information] {
+		let localData = NSData(contentsOfFile: Asset.File.LocalContent)
+		let resource = Information.all
 
-		return []
+		if let result = localData.flatMap(resource.parse) {
+			return result
+		} else {
+			return []
+		}
 	}
 
 }
+
+
+
+

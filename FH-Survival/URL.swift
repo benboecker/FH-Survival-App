@@ -18,10 +18,14 @@ struct URL {
 	let title: String
 	let url: NSURL
 	let type: URLType
+
+	var json: JSONDictionary {
+		return self.jsonValue()
+	}
 }
 
 extension URL {
-	init? (json: [String: AnyObject]) {
+	init? (json: JSONDictionary) {
 		guard let url = NSURL(string: json["url"] as? String ?? " ") else { return nil }
 		
 		self.title = json["title"] as? String ?? ""
@@ -40,5 +44,13 @@ extension URL {
 		return .Web
 	}
 
+	private func jsonValue() -> JSONDictionary {
+		var json: JSONDictionary = [:]
+
+		json["url"] = self.url.absoluteString
+		json["title"] = self.title
+
+		return json
+	}
 }
 

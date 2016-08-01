@@ -22,7 +22,7 @@ class HeadlineTableViewCell: UITableViewCell, Reuseable {
 	override func updateStyle() {
 		super.updateStyle()
 
-		self.headlineLabel?.textColor = AppColor.accent
+		self.headlineLabel?.textColor = AppColor.primary
 		self.bodyLabel?.textColor = AppColor.secondaryText
 
 		self.headlineLabel?.font = UIFont(textStyle: .Title3)
