@@ -22,7 +22,7 @@ class ColorSelectionCollectionViewCell: UICollectionViewCell, Reusable {
 		self.backgroundView = nil
 
 		let selectedView = UIView(frame: self.bounds)
-		selectedView.backgroundColor = AppColor.background
+		selectedView.backgroundColor = UIColor.clearColor()
 		selectedView.layer.cornerRadius = 10.0
 		selectedView.layer.borderColor = AppColor.accent.CGColor
 		selectedView.layer.borderWidth = 2.0
@@ -36,7 +36,7 @@ class ColorSelectionCollectionViewCell: UICollectionViewCell, Reusable {
 		self.secondaryColorView.backgroundColor = colorScheme.secondary
 		self.accentColorView.backgroundColor = colorScheme.accent
 		self.primaryTextColorView.backgroundColor = colorScheme.primaryText
-		self.secondaryTextColorView.backgroundColor = colorScheme.secondaryText
+		self.secondaryTextColorView.backgroundColor = colorScheme.background
 	}
 
 	override func updateStyle() {

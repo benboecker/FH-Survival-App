@@ -1,6 +1,16 @@
 {
 	"colorSchemes": [
 					 {
+					 "name": "FH-Survival",
+					 "primary" : "#FF0080",
+					 "secondary" : "#EE0070",
+					 "accent" : "#810041",
+					 "primaryText" : "#333333",
+					 "secondaryText" : "#333333",
+					 "hintText" : "#AAAAAA",
+					 "background" : "#FFFFFF",
+					 },
+					 {
 					 "name": "Green Sea",
 					 "primary" : "#32965D",
 					 "secondary" : "#68A357",
@@ -8,7 +18,7 @@
 					 "primaryText" : "#C97064",
 					 "secondaryText" : "#C97064",
 					 "hintText" : "#C97064",
-					 "background" : "#BCA371",
+					 "background" : "#EEEEEE",
 					 },
 					 {
 					 "name": "Midnight",
@@ -18,17 +28,17 @@
 					 "primaryText" : "#896279",
 					 "secondaryText" : "#896279",
 					 "hintText" : "#896279",
-					 "background" : "#776258",
+					 "background" : "#EEEEEE",
 					 },
 					 {
 					 "name": "Red Lakritz",
 					 "primary" : "#0C1713",
 					 "secondary" : "#AB4967",
-					 "accent" : "#A04668",
+					 "accent" : "#AB4967",
 					 "primaryText" : "#0C1713",
 					 "secondaryText" : "#AB4967",
 					 "hintText" : "#AB4967",
-					 "background" : "#BC8DA0",
+					 "background" : "#EEEEEE",
 					 },
 					 {
 					 "name": "Red Blue",
@@ -38,7 +48,7 @@
 					 "primaryText" : "#17255A",
 					 "secondaryText" : "#D88373",
 					 "hintText" : "#F5E2C8",
-					 "background" : "#17255A",
+					 "background" : "#EEEEEE",
 					 },
 
 

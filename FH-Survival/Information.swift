@@ -32,8 +32,26 @@ struct Information {
 	let urls: [URL]
 	let images: [String]
 
-	var json: JSONDictionary {
-		return self.jsonValue()
+	var json: String {
+		let jsonDict = self.jsonValue()
+
+		if (NSJSONSerialization.isValidJSONObject(jsonDict)) {
+			do {
+				let jsonData = try NSJSONSerialization.dataWithJSONObject(jsonDict, options: NSJSONWritingOptions.PrettyPrinted)
+				if let jsonString = String(data: jsonData, encoding: NSUTF8StringEncoding) {
+					return jsonString
+				} else {
+					print("Info (\(self.title)) conversion to JSON failed: Couldn't create String from JSON data")
+					return ""
+				}
+			} catch let error as NSError {
+				print("Info (\(self.title)) conversion to JSON failed: \(error)")
+			}
+			return ""
+		} else {
+			print("Info (\(self.title)) conversion to JSON failed: Not a valid JSON object")
+			return ""
+		}
 	}
 }
 

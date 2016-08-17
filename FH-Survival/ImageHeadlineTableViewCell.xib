@@ -7,34 +7,37 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageHeadlineTableViewCell" rowHeight="100" id="LPL-7Q-hJp" customClass="ImageHeadlineTableViewCell" customModule="FH_Survival" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ImageHeadlineTableViewCell" rowHeight="100" id="LPL-7Q-hJp" customClass="ImageHeadlineTableViewCell" customModule="FH_Survival" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LPL-7Q-hJp" id="yqm-qf-4aw">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="567" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto0" translatesAutoresizingMaskIntoConstraints="NO" id="rPt-fb-RDh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="602" height="93"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="GJr-pm-Pvn"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="93" id="GJr-pm-Pvn"/>
                         </constraints>
                     </imageView>
-                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-Sf-lKn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                    <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-Sf-lKn">
+                        <rect key="frame" x="0.0" y="0.0" width="602" height="93"/>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.10032327586206896" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="93" id="aFS-sh-OXB"/>
+                        </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="871-sF-Igv">
-                        <rect key="frame" x="15" y="10" width="570" height="79"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="871-sF-Igv">
+                        <rect key="frame" x="15" y="10" width="537" height="62"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" misplaced="YES" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDu-g1-eFp">
-                                <rect key="frame" x="0.0" y="0.0" width="570" height="33"/>
+                                <rect key="frame" x="0.0" y="0.0" width="537" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.50588235290000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Body Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-mi-q6H">
-                                <rect key="frame" x="0.0" y="43" width="570" height="37"/>
+                                <rect key="frame" x="0.0" y="43" width="537" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="0.30196079609999998" green="0.30196079609999998" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,9 +47,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="rPt-fb-RDh" firstAttribute="top" secondItem="yqm-qf-4aw" secondAttribute="top" id="0bL-WO-SuJ"/>
-                    <constraint firstAttribute="trailing" secondItem="rPt-fb-RDh" secondAttribute="trailing" id="B7J-52-IHr"/>
+                    <constraint firstAttribute="trailing" secondItem="rPt-fb-RDh" secondAttribute="trailing" constant="-35" id="B7J-52-IHr"/>
                     <constraint firstAttribute="bottom" secondItem="2G3-Sf-lKn" secondAttribute="bottom" id="Dpo-R0-5wR"/>
-                    <constraint firstAttribute="trailing" secondItem="2G3-Sf-lKn" secondAttribute="trailing" id="Ngj-ET-pu8"/>
+                    <constraint firstAttribute="trailing" secondItem="2G3-Sf-lKn" secondAttribute="trailing" constant="-35" id="Ngj-ET-pu8"/>
                     <constraint firstAttribute="trailing" secondItem="871-sF-Igv" secondAttribute="trailing" constant="15" id="Pdm-aO-jjq"/>
                     <constraint firstItem="2G3-Sf-lKn" firstAttribute="leading" secondItem="yqm-qf-4aw" secondAttribute="leading" id="TbI-Mv-a0u"/>
                     <constraint firstItem="rPt-fb-RDh" firstAttribute="leading" secondItem="yqm-qf-4aw" secondAttribute="leading" id="Ww2-bZ-hSm"/>

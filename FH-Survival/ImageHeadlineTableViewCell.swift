@@ -39,20 +39,30 @@ class ImageHeadlineTableViewCell: UITableViewCell, ReusableTableViewCell {
 		}
 	}
 
+	override func setSelected(selected: Bool, animated: Bool) {
+		super.setSelected(selected, animated: animated)
+		//self.overlayView.backgroundColor = AppColor.background
+		//print("setSelected: \(selected) animated: \(animated)")
+	}
+
+	override func setHighlighted(highlighted: Bool, animated: Bool) {
+		super.setHighlighted(highlighted, animated: animated)
+		//self.overlayView.backgroundColor = AppColor.background
+		//print("setHighlighted: \(selected) animated: \(animated)")
+	}
+
+
 	override func updateStyle() {
 		super.updateStyle()
 
 		self.overlayView.backgroundColor = AppColor.background
-		self.overlayView.backgroundColor = UIColor(white: 1.0, alpha: 0.7)
-
-		self.bodyLabel?.textColor = AppColor.secondaryText
-
 		self.backgroundColor = AppColor.background
 
+		self.bodyLabel?.textColor = AppColor.secondaryText
 		self.bodyLabel?.font = UIFont(textStyle: .Body)
 
 		self.headlineLabel?.textColor = AppColor.primaryText
-		self.headlineLabel?.font = UIFont(textStyle: .Title3)
+		self.headlineLabel?.font = UIFont(textStyle: .Headline)
 
 		self.headlineImageView.contentMode = .ScaleAspectFill
 	}

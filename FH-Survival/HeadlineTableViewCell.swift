@@ -27,7 +27,6 @@ class HeadlineTableViewCell: UITableViewCell, ReusableTableViewCell {
 		}
 	}
 
-
 	override func updateStyle() {
 		super.updateStyle()
 
@@ -36,7 +35,7 @@ class HeadlineTableViewCell: UITableViewCell, ReusableTableViewCell {
 
 		self.backgroundColor = AppColor.background
 
-		self.headlineLabel?.font = UIFont(textStyle: .Title3)
+		self.headlineLabel?.font = UIFont(textStyle: .Headline)
 		self.bodyLabel?.font = UIFont(textStyle: .Body)
 	}
 }

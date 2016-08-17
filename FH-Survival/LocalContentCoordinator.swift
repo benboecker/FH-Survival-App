@@ -15,7 +15,13 @@ struct LocalContentCoordinator {
 	}
 
 	func saveContent(information: [Information]) {
-		
+		var jsonString = "{\"information\"["
+
+		for informationElement in information {
+			jsonString += informationElement.json + ","
+		}
+
+		jsonString += "]}"
 	}
 
 	func loadContent() -> [Information] {

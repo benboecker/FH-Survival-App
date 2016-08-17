@@ -59,6 +59,7 @@ extension Content {
 		self.webService.load(Information.all) { (data) in
 			if let information = data {
 				self.information = information
+				LocalContentCoordinator().saveContent(self.information)
 				self.loadCompleted(.Success(self))
 			} else {
 				self.loadCompleted(.Failure(.JSONParsingError))

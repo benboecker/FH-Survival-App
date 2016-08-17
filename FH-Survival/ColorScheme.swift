@@ -35,7 +35,7 @@ struct ColorScheme {
 		self.primaryText = UIColor(hexString: primaryTextColorString)
 		self.secondaryText = UIColor(hexString: secondaryTextColorString)
 		self.hintText = UIColor(hexString: hintTextColorString)
-		self.background = UIColor(hexString: backgroundColorString, alpha: 0.1)
+		self.background = UIColor(hexString: backgroundColorString, alpha: 0.9)
 	}
 
 	static var all: [ColorScheme] {

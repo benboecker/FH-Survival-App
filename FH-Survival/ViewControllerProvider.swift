@@ -63,6 +63,12 @@ enum ViewControllerProvider {
 		searchViewController.title = "Suche"
 		return searchViewController
 	}
+
+	static var colorSchemeViewController: ColorSchemeViewController {
+		return ColorSchemeViewController(collectionViewLayout: UICollectionViewFlowLayout())
+	}
+
+
 }
 
 

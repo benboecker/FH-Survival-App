@@ -32,7 +32,8 @@ class InformationListViewController<Cell: UITableViewCell where Cell: ReusableTa
 
 		self.tableView.estimatedRowHeight = 60
 		self.tableView.rowHeight = UITableViewAutomaticDimension
-		self.tableView.registerReuseableCell(Cell.self) // This will register using the class without using a UINib
+		self.tableView.registerReuseableCell(Cell.self)
+
 		let bucketIcon = UIBarButtonItem(image: Asset.Icon.Bucket, style: .Plain, target: self, action: #selector(didTapBucket(_:)))
 		self.navigationItem.leftBarButtonItem = bucketIcon
 
@@ -58,12 +59,13 @@ class InformationListViewController<Cell: UITableViewCell where Cell: ReusableTa
 	}
 
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		let detailViewController = InformationDetailViewController(information: self.information[indexPath.row])
+		let info = self.information[indexPath.row]
+		let detailViewController = InformationDetailViewController(information: info)
 		self.navigationController?.pushViewController(detailViewController, animated: true)
 	}
 
 	func didTapBucket(sender: UIBarButtonItem) {
-		let colorSchemeViewController = ColorSchemeViewController(collectionViewLayout: UICollectionViewFlowLayout())
+		let colorSchemeViewController = ViewControllerProvider.colorSchemeViewController
 		colorSchemeViewController.delegate = self
 		let colorNavigationController = UINavigationController(rootViewController: colorSchemeViewController)
 		self.presentViewController(colorNavigationController, animated: true, completion: nil)
