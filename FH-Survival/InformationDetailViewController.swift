@@ -10,6 +10,11 @@ import UIKit
 
 class InformationDetailViewController: UITableViewController {
 
+	private var imageGalleryHeight: CGFloat {
+		return self.information.images.count == 0 ? 0 : 200.0
+	}
+
+	var imageGalleryView: ImageGalleryView!
 	var information: Information
 
 	init(information: Information) {
@@ -31,6 +36,16 @@ class InformationDetailViewController: UITableViewController {
 
 		self.tableView.registerReuseableCell(ContentTableViewCell.self)
 		self.tableView.registerReuseableCell(ImageTableViewCell.self)
+
+		let galleryFrame = CGRectMake(0, 0, 320, imageGalleryHeight)
+		self.imageGalleryView = ImageGalleryView(frame: galleryFrame)
+		self.imageGalleryView.delegate = self
+
+		self.tableView.tableHeaderView = nil
+		self.tableView.addSubview(self.imageGalleryView)
+
+		self.tableView.contentInset = UIEdgeInsets(top: imageGalleryHeight, left: 0.0, bottom: 0.0, right: 0.0)
+		self.tableView.contentOffset = CGPointMake(0.0, imageGalleryHeight)
 	}
 
     // MARK: - Table view data source
@@ -60,7 +75,7 @@ class InformationDetailViewController: UITableViewController {
 		switch indexPath.section {
 		case 0:
 			let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as ContentTableViewCell
-			cell.configureWithInformation(self.information)
+			cell.configureWith(self.information)
 
 			return cell
 		case 1:
@@ -92,4 +107,36 @@ class InformationDetailViewController: UITableViewController {
 		default: break
 		}
 	}
+
+	private func updateHeaderViewFrame() {
+		var headerRect = CGRectMake(0.0, -imageGalleryHeight, self.tableView.bounds.size.width, imageGalleryHeight)
+
+		if (self.tableView.contentOffset.y < -imageGalleryHeight) {
+			headerRect.origin.y = self.tableView.contentOffset.y
+			headerRect.size.height = -self.tableView.contentOffset.y
+		}
+
+		self.imageGalleryView.frame = headerRect
+		self.tableView.bringSubviewToFront(self.imageGalleryView)
+	}
 }
+
+extension InformationDetailViewController: ImageGalleryDelegate {
+	func numberOfImages(inImageGalleryView galleryView: ImageGalleryView) -> Int {
+		return self.information.images.count
+	}
+
+	func imageGalleryView(galleryView: ImageGalleryView, imageCallback callback: ImageCallback, forImageAtIndex index: Int) {
+		if let image = UIImage(named: self.information.images[index]) {
+			callback(image: image)
+		}
+	}
+}
+
+extension InformationDetailViewController {
+	override func scrollViewDidScroll(scrollView: UIScrollView) {
+		self.updateHeaderViewFrame()
+	}
+}
+
+

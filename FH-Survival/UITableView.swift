@@ -8,16 +8,16 @@
 import UIKit
 
 internal extension UITableView {
-	func registerReuseableCell<T: UITableViewCell where T: Reuseable>(_: T.Type) {
-		if let nib = T.nib {
-			self.registerNib(nib, forCellReuseIdentifier: T.reuseIdentifier)
+	func registerReuseableCell<Cell: UITableViewCell where Cell: Reusable>(cellType: Cell.Type) {
+		if let nib = Cell.nib {
+			self.registerNib(nib, forCellReuseIdentifier: Cell.reuseIdentifier)
 		} else {
-			self.registerClass(T.self, forCellReuseIdentifier: T.reuseIdentifier)
+			self.registerClass(Cell.self, forCellReuseIdentifier: Cell.reuseIdentifier)
 		}
 	}
 
-	func dequeueReuseableCell<T: UITableViewCell where T: Reuseable>(indexPath indexPath: NSIndexPath) -> T {
-		return self.dequeueReusableCellWithIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as! T
+	func dequeueReuseableCell<Cell: UITableViewCell where Cell: Reusable>(indexPath indexPath: NSIndexPath) -> Cell {
+		return self.dequeueReusableCellWithIdentifier(Cell.reuseIdentifier, forIndexPath: indexPath) as! Cell
 	}
 }
 

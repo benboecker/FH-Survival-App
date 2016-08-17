@@ -16,4 +16,18 @@ extension UIColor {
 
 		self.init(red:red, green:green, blue:blue, alpha:alpha)
 	}
+
+	convenience init(hexString: String, alpha: CGFloat = 1.0) {
+		var hexInt: UInt32 = 0
+
+		let scanner: NSScanner = NSScanner(string: hexString)
+		scanner.charactersToBeSkipped = NSCharacterSet(charactersInString: "#")
+		scanner.scanHexInt(&hexInt)
+
+		let red = CGFloat((hexInt & 0xFF0000) >> 16) / 255.0
+		let green = CGFloat((hexInt & 0xFF00) >> 8) / 255.0
+		let blue = CGFloat((hexInt & 0xFF)) / 255.0
+
+		self.init(red:red, green:green, blue:blue, alpha:alpha)
+	}
 }

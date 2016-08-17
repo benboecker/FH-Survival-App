@@ -8,22 +8,33 @@
 
 import UIKit
 
-class HeadlineTableViewCell: UITableViewCell, Reuseable {
+class HeadlineTableViewCell: UITableViewCell, ReusableTableViewCell {
+	typealias Type = Information
+
 	@IBOutlet weak var headlineLabel: UILabel!
 	@IBOutlet weak var bodyLabel: UILabel!
 
-	func configureWithInformation(information: Information) {
-		self.headlineLabel?.text = information.title
-		self.bodyLabel?.text = information.text
+	var configure: (Type) -> () = { _ in }
 
-		
+	override func awakeFromNib() {
+		super.awakeFromNib()
+
+		self.configure = { information in
+			self.headlineLabel?.text = information.title
+			self.bodyLabel?.text = information.text
+
+			self.updateStyle()
+		}
 	}
+
 
 	override func updateStyle() {
 		super.updateStyle()
 
-		self.headlineLabel?.textColor = AppColor.primary
+		self.headlineLabel?.textColor = AppColor.primaryText
 		self.bodyLabel?.textColor = AppColor.secondaryText
+
+		self.backgroundColor = AppColor.background
 
 		self.headlineLabel?.font = UIFont(textStyle: .Title3)
 		self.bodyLabel?.font = UIFont(textStyle: .Body)

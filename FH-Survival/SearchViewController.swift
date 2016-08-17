@@ -49,7 +49,7 @@ class SearchViewController: UITableViewController, ContentViewController, UISear
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as HeadlineTableViewCell
-		cell.configureWithInformation(self.searchResults[indexPath.row])
+		cell.configureCell(self.searchResults[indexPath.row])
 		return cell
 	}
 

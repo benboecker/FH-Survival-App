@@ -17,6 +17,6 @@ extension UIView: Styled {
 	}
 
 	func updateStyle() {
-		self.tintColor = AppColor.primary
+		self.tintColor = AppColor.accent
 	}
 }

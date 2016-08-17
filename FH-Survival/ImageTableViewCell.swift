@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageTableViewCell: UITableViewCell, Reuseable {
+class ImageTableViewCell: UITableViewCell, Reusable {
 
 	@IBOutlet weak var label: UILabel!
 	@IBOutlet weak var tintedImageView: UIImageView!

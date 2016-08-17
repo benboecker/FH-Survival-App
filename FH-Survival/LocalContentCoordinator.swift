@@ -15,7 +15,7 @@ struct LocalContentCoordinator {
 	}
 
 	func saveContent(information: [Information]) {
-
+		
 	}
 
 	func loadContent() -> [Information] {

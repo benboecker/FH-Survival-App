@@ -9,15 +9,13 @@
 import UIKit
 
 
-class InformationListViewController: UITableViewController, ContentViewController {
+class InformationListViewController<Cell: UITableViewCell where Cell: ReusableTableViewCell>: UITableViewController, ContentViewController {
 
 	private let tags: [Tag]
 
 	private var information: [Information] {
 		return self.content.getInformation(self.tags)
 	}
-
-	var showInformationDetail: (Information) -> () = {_ in}
 
 	init(tags: [Tag]) {
 		self.tags = tags
@@ -34,13 +32,17 @@ class InformationListViewController: UITableViewController, ContentViewControlle
 
 		self.tableView.estimatedRowHeight = 60
 		self.tableView.rowHeight = UITableViewAutomaticDimension
-
-		self.tableView.registerReuseableCell(HeadlineTableViewCell.self) // This will register using the class without using a UINib
-
+		self.tableView.registerReuseableCell(Cell.self) // This will register using the class without using a UINib
 		let bucketIcon = UIBarButtonItem(image: Asset.Icon.Bucket, style: .Plain, target: self, action: #selector(didTapBucket(_:)))
 		self.navigationItem.leftBarButtonItem = bucketIcon
 
 		self.loadContent()
+	}
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+
+		self.tableView.reloadData()
 	}
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,19 +50,15 @@ class InformationListViewController: UITableViewController, ContentViewControlle
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as HeadlineTableViewCell
-		cell.configureWithInformation(self.information[indexPath.row])
+		let cell = tableView.dequeueReuseableCell(indexPath: indexPath) as Cell
+		let information: Information = self.information[indexPath.row]
 
+		cell.configureCell(information)
 		return cell
 	}
 
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//		self.showInformationDetail(self.information[indexPath.row])
-
-//		let detailViewController = InformationDetailViewController(information: self.information[indexPath.row])
-//		self.navigationController?.pushViewController(detailViewController, animated: true)
-
-		let detailViewController = ImageGalleryViewController()
+		let detailViewController = InformationDetailViewController(information: self.information[indexPath.row])
 		self.navigationController?.pushViewController(detailViewController, animated: true)
 	}
 

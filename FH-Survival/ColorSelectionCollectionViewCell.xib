@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -14,30 +14,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sX-SA-PhG">
-                        <rect key="frame" x="20" y="20" width="160" height="146"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sX-SA-PhG">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="166"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e2g-gN-9ii">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dai-nE-gnK">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="36"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oW5-f9-ndK">
-                                        <rect key="frame" x="0.0" y="32" width="160" height="32"/>
+                                        <rect key="frame" x="0.0" y="36" width="200" height="36"/>
                                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-ku-liT">
-                                        <rect key="frame" x="0.0" y="64" width="160" height="32"/>
+                                        <rect key="frame" x="0.0" y="72" width="200" height="36"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADP-Rg-Dv7">
-                                        <rect key="frame" x="0.0" y="96" width="160" height="32"/>
+                                        <rect key="frame" x="0.0" y="108" width="200" height="36"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XlI-IJ-BwB">
-                                        <rect key="frame" x="0.0" y="128" width="160" height="32"/>
+                                        <rect key="frame" x="0.0" y="144" width="200" height="36"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
@@ -66,10 +66,10 @@
                             <constraint firstItem="e2g-gN-9ii" firstAttribute="leading" secondItem="9sX-SA-PhG" secondAttribute="leading" id="ZKj-Ag-sm8"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Scheme Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvh-XG-QDo">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Color Scheme Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvh-XG-QDo">
                         <rect key="frame" x="10" y="176" width="180" height="13.5"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -78,12 +78,12 @@
             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Cvh-XG-QDo" secondAttribute="bottom" constant="10" id="F57-b8-Mc1"/>
-                <constraint firstItem="9sX-SA-PhG" firstAttribute="leading" secondItem="2lG-zk-NpK" secondAttribute="leading" constant="20" id="Kvy-86-zJk"/>
+                <constraint firstItem="9sX-SA-PhG" firstAttribute="leading" secondItem="2lG-zk-NpK" secondAttribute="leading" id="Kvy-86-zJk"/>
                 <constraint firstItem="Cvh-XG-QDo" firstAttribute="top" secondItem="9sX-SA-PhG" secondAttribute="bottom" constant="10" id="b6e-a6-Q92"/>
-                <constraint firstItem="9sX-SA-PhG" firstAttribute="top" secondItem="2lG-zk-NpK" secondAttribute="top" constant="20" id="d6E-h0-QFe"/>
+                <constraint firstItem="9sX-SA-PhG" firstAttribute="top" secondItem="2lG-zk-NpK" secondAttribute="top" id="d6E-h0-QFe"/>
                 <constraint firstItem="Cvh-XG-QDo" firstAttribute="leading" secondItem="2lG-zk-NpK" secondAttribute="leading" constant="10" id="fDd-qy-QZ6"/>
                 <constraint firstAttribute="trailing" secondItem="Cvh-XG-QDo" secondAttribute="trailing" constant="10" id="n9a-7F-jPZ"/>
-                <constraint firstAttribute="trailing" secondItem="9sX-SA-PhG" secondAttribute="trailing" constant="20" id="x6o-eL-XIV"/>
+                <constraint firstAttribute="trailing" secondItem="9sX-SA-PhG" secondAttribute="trailing" id="x6o-eL-XIV"/>
             </constraints>
             <size key="customSize" width="220" height="212"/>
             <connections>

@@ -8,6 +8,9 @@
 					"tags": [
 							 "Tipp", "Allgemein", "Neuigkeiten"
 							 ],
+					"images": [
+							   "foto0", "foto1", "foto2"
+							   ],
 					"urls": []
 					},
 					{
@@ -33,6 +36,9 @@
 					"tags": [
 							 "Erste Schritte", "Allgemein"
 							 ],
+					"images": [
+							   "foto7"
+							   ],
 					"urls": []
 					},
 					{
@@ -87,6 +93,9 @@
 					"tags": [
 							 "Erste Schritte", "Organisation", "Neuigkeiten"
 							 ],
+					"images": [
+							   "foto8"
+							   ],
 					"urls": []
 					},
 					{
@@ -127,6 +136,9 @@
 					"tags": [
 							 "Tipp", "Organisation"
 							 ],
+					"images": [
+							   "foto3"
+							   ],
 					"urls": []
 					},
 					{
@@ -157,6 +169,9 @@
 					"tags": [
 							 "Organisation", "Allgemein"
 							 ],
+					"images": [
+							   "foto4"
+							   ],
 					"urls": []
 					},
 					{
@@ -177,6 +192,9 @@
 					"tags": [
 							 "Tipp", "Erste Schritte", "Allgemein"
 							 ],
+					"images": [
+							   "foto5"
+							   ],
 					"urls": []
 					},
 					{
@@ -225,6 +243,9 @@
 					"tags": [
 							 "Tipp", "Allgemein"
 							 ],
+					"images": [
+							   "foto6"
+							   ],
 					"urls": []
 					},
 					{

@@ -18,69 +18,44 @@ struct ColorScheme {
 	let hintText: UIColor
 	let background: UIColor
 
+	init(json: JSONDictionary) {
+		self.name = json["name"] as? String ?? ""
+
+		let primaryColorString = json["primary"] as? String ?? "#000000"
+		let secondaryColorString = json["secondary"] as? String ?? "#000000"
+		let accentColorString = json["accent"] as? String ?? "#000000"
+		let primaryTextColorString = json["primaryText"] as? String ?? "#000000"
+		let secondaryTextColorString = json["secondaryText"] as? String ?? "#000000"
+		let hintTextColorString = json["hintText"] as? String ?? "#000000"
+		let backgroundColorString = json["background"] as? String ?? "#000000"
+
+		self.primary = UIColor(hexString: primaryColorString)
+		self.secondary = UIColor(hexString: secondaryColorString)
+		self.accent = UIColor(hexString: accentColorString)
+		self.primaryText = UIColor(hexString: primaryTextColorString)
+		self.secondaryText = UIColor(hexString: secondaryTextColorString)
+		self.hintText = UIColor(hexString: hintTextColorString)
+		self.background = UIColor(hexString: backgroundColorString, alpha: 0.1)
+	}
+
 	static var all: [ColorScheme] {
-		return [ColorScheme.strawberryColorScheme,
-		        ColorScheme.citrusColorScheme,
-		        ColorScheme.limeColorScheme,
-		        ColorScheme.blueberryColorScheme,
-		        ColorScheme.cherryColorScheme
-		]
+		var colorSchemes: [ColorScheme] = []
+		let jsonPath = NSBundle.mainBundle().pathForResource("colorSchemes", ofType: "json")!
+		let jsonData = NSData(contentsOfFile: jsonPath)!
+		let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: []) as? JSONDictionary ?? [:]
+
+		let jsonColorSchemes: [JSONDictionary] = json!["colorSchemes"] as? [JSONDictionary] ?? [[:]]
+		for jsonElement in jsonColorSchemes {
+			colorSchemes.append(ColorScheme(json: jsonElement))
+		}
+
+		return colorSchemes
 	}
 
-	private static var strawberryColorScheme: ColorScheme {
-		return ColorScheme(name: "Erdbeere",
-		                   primary: UIColor(hex: ColorHexCodes.Strawberry.Primary),
-		                   secondary: UIColor(hex: ColorHexCodes.Strawberry.Secondary),
-		                   accent: UIColor(hex: ColorHexCodes.Strawberry.Accent),
-		                   primaryText: UIColor(hex: ColorHexCodes.Strawberry.PrimaryText),
-		                   secondaryText: UIColor(hex: ColorHexCodes.Strawberry.SecondaryText),
-		                   hintText: UIColor(hex: ColorHexCodes.Strawberry.HintText),
-		                   background: UIColor(hex: ColorHexCodes.Strawberry.Background))
-	}
 
-	private static var citrusColorScheme: ColorScheme {
-		return ColorScheme(name: "Zitrone",
-		                   primary: UIColor(hex: ColorHexCodes.Citrus.Primary),
-		                   secondary: UIColor(hex: ColorHexCodes.Citrus.Secondary),
-		                   accent: UIColor(hex: ColorHexCodes.Citrus.Accent),
-		                   primaryText: UIColor(hex: ColorHexCodes.Citrus.PrimaryText),
-		                   secondaryText: UIColor(hex: ColorHexCodes.Citrus.SecondaryText),
-		                   hintText: UIColor(hex: ColorHexCodes.Citrus.HintText),
-		                   background: UIColor(hex: ColorHexCodes.Citrus.Background))
-	}
-
-	private static var limeColorScheme: ColorScheme {
-		return ColorScheme(name: "Limette",
-		                   primary: UIColor(hex: ColorHexCodes.Lime.Primary),
-		                   secondary: UIColor(hex: ColorHexCodes.Lime.Secondary),
-		                   accent: UIColor(hex: ColorHexCodes.Lime.Accent),
-		                   primaryText: UIColor(hex: ColorHexCodes.Lime.PrimaryText),
-		                   secondaryText: UIColor(hex: ColorHexCodes.Lime.SecondaryText),
-		                   hintText: UIColor(hex: ColorHexCodes.Lime.HintText),
-		                   background: UIColor(hex: ColorHexCodes.Lime.Background))
-	}
-
-	private static var blueberryColorScheme: ColorScheme {
-		return ColorScheme(name: "Blaubeere",
-		                   primary: UIColor(hex: ColorHexCodes.Blueberry.Primary),
-		                   secondary: UIColor(hex: ColorHexCodes.Blueberry.Secondary),
-		                   accent: UIColor(hex: ColorHexCodes.Blueberry.Accent),
-		                   primaryText: UIColor(hex: ColorHexCodes.Blueberry.PrimaryText),
-		                   secondaryText: UIColor(hex: ColorHexCodes.Blueberry.SecondaryText),
-		                   hintText: UIColor(hex: ColorHexCodes.Blueberry.HintText),
-		                   background: UIColor(hex: ColorHexCodes.Blueberry.Background))
-	}
-
-	private static var cherryColorScheme: ColorScheme {
-		return ColorScheme(name: "Kirsche",
-		                   primary: UIColor(hex: ColorHexCodes.Cherry.Primary),
-		                   secondary: UIColor(hex: ColorHexCodes.Cherry.Secondary),
-		                   accent: UIColor(hex: ColorHexCodes.Cherry.Accent),
-		                   primaryText: UIColor(hex: ColorHexCodes.Cherry.PrimaryText),
-		                   secondaryText: UIColor(hex: ColorHexCodes.Cherry.SecondaryText),
-		                   hintText: UIColor(hex: ColorHexCodes.Cherry.HintText),
-		                   background: UIColor(hex: ColorHexCodes.Cherry.Background))
-	}
 
 	
 }
+
+
+

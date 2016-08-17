@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol Reuseable: class {
+protocol Reusable: class {
 	static var reuseIdentifier: String { get }
 	static var nib: UINib? { get }
 }
 
-extension Reuseable {
+extension Reusable {
 	static var reuseIdentifier: String {
 		return String(Self)
 	}
@@ -21,3 +21,8 @@ extension Reuseable {
 		return UINib(nibName: String(Self), bundle: nil)
 	}
 }
+
+
+
+
+

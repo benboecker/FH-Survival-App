@@ -38,11 +38,16 @@ class ColorSchemeViewController: UICollectionViewController {
 		self.navigationItem.leftBarButtonItem = cancelButton
 	}
 
-	override func viewWillAppear(animated: Bool) {
-		super.viewWillAppear(animated)
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
 
-		let selectedIndexPath = NSIndexPath(forItem: 0, inSection: 0)
-		self.collectionView?.selectItemAtIndexPath(selectedIndexPath, animated: false, scrollPosition: .CenteredVertically)
+		let index = ColorScheme.all.indexOf { (color) -> Bool in
+			return color.name == AppColor.currentColorScheme.name
+		}
+		if let index = index {
+			let selectedIndexPath = NSIndexPath(forItem: index, inSection: 0)
+			self.collectionView?.selectItemAtIndexPath(selectedIndexPath, animated: false, scrollPosition: .CenteredVertically)
+		}
 	}
 
 	override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

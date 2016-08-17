@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ContentTableViewCell: UITableViewCell, Reuseable {
+class ContentTableViewCell: UITableViewCell, ReusableTableViewCell {
+
+	typealias Type = Information
+
+
+	var configure: (Type) -> () = { _ in
+
+	}
 
 	@IBOutlet weak var headlineLabel: UILabel!
 	@IBOutlet weak var subheadlineLabel: UILabel!
 	@IBOutlet weak var contentLabel: UILabel!
 
-	func configureWithInformation(information: Information) {
+	func configureWith(information: Type) {
 		self.headlineLabel?.text = information.title
 		self.contentLabel?.text = information.text
 		self.subheadlineLabel?.text = information.location
@@ -23,7 +30,7 @@ class ContentTableViewCell: UITableViewCell, Reuseable {
 	override func updateStyle() {
 		super.updateStyle()
 
-		self.headlineLabel.textColor = AppColor.accent
+		self.headlineLabel.textColor = AppColor.primaryText
 		self.subheadlineLabel.textColor = AppColor.secondaryText
 		self.contentLabel.textColor = AppColor.primaryText
 

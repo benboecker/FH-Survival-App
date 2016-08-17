@@ -17,6 +17,7 @@ private enum JSONKeys {
 	static let tags = "tags"
 	static let urls = "urls"
 	static let phone = "phone"
+	static let images = "images"
 }
 
 struct Information {
@@ -29,6 +30,7 @@ struct Information {
 
 	let tags: [Tag]
 	let urls: [URL]
+	let images: [String]
 
 	var json: JSONDictionary {
 		return self.jsonValue()
@@ -73,6 +75,12 @@ extension Information {
 		} else {
 			self.date = NSDate()
 		}
+
+		if let jsonImages = json[JSONKeys.images] as? [String] {
+			self.images = jsonImages
+		} else {
+			self.images = []
+		}
 	}
 
 	private func jsonValue() -> JSONDictionary {
@@ -82,6 +90,7 @@ extension Information {
 		json[JSONKeys.id] = self.id
 		json[JSONKeys.location] = self.location
 		json[JSONKeys.text] = self.text
+		json[JSONKeys.images] = self.images
 
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "yyyy-MM-dd"

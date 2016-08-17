@@ -1,0 +1,51 @@
+{
+	"colorSchemes": [
+					 {
+					 "name": "Green Sea",
+					 "primary" : "#32965D",
+					 "secondary" : "#68A357",
+					 "accent" : "#C97064",
+					 "primaryText" : "#C97064",
+					 "secondaryText" : "#C97064",
+					 "hintText" : "#C97064",
+					 "background" : "#BCA371",
+					 },
+					 {
+					 "name": "Midnight",
+					 "primary" : "#ADB2D3",
+					 "secondary" : "#9C7CA5",
+					 "accent" : "#896279",
+					 "primaryText" : "#896279",
+					 "secondaryText" : "#896279",
+					 "hintText" : "#896279",
+					 "background" : "#776258",
+					 },
+					 {
+					 "name": "Red Lakritz",
+					 "primary" : "#0C1713",
+					 "secondary" : "#AB4967",
+					 "accent" : "#A04668",
+					 "primaryText" : "#0C1713",
+					 "secondaryText" : "#AB4967",
+					 "hintText" : "#AB4967",
+					 "background" : "#BC8DA0",
+					 },
+					 {
+					 "name": "Red Blue",
+					 "primary" : "#BD1E1E",
+					 "secondary" : "#D88373",
+					 "accent" : "#18206F",
+					 "primaryText" : "#17255A",
+					 "secondaryText" : "#D88373",
+					 "hintText" : "#F5E2C8",
+					 "background" : "#17255A",
+					 },
+
+
+
+
+
+
+	]
+
+}

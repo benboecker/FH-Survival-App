@@ -23,6 +23,10 @@ final class AppColor {
 		self.selectedColorScheme = self.loadColorScheme()
 	}
 
+	static var currentColorScheme: ColorScheme {
+		return AppColor.shared.selectedColorScheme
+	}
+
 	static var primary: UIColor {
 		return AppColor.shared.primaryColor()
 	}

@@ -43,3 +43,26 @@ extension ContentViewController where Self: UITableViewController {
 		
 	}
 }
+
+extension ContentViewController where Self: UICollectionViewController {
+	/**
+	This method loads new content data via the `loadContent()` method of the Content Singleton. A loading indicator is shown and removed when the process finishes. If the loading process fails, an `UIAlertView` is shown via the `ErrorViewController` protocol.
+	*/
+	internal func loadContent() {
+		self.showLoadingViewController()
+
+		self.content.loadContent { [weak self] result in
+			self?.hideLoadingViewController()
+
+			switch result {
+			case .Success(_):
+				self?.collectionView?.reloadData()
+			case let .Failure(error):
+				print(error)
+			}
+		}
+		
+	}
+}
+
+
